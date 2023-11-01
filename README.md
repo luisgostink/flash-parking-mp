@@ -24,6 +24,7 @@ The main objective of the priject is to create a minimalistic user friendly app 
     - Parking spots table. 
 
 ## Nice to have (both Frontend and Backend)
+- Light/dark mode toggle. 
 - Language translation to Spanish and German. 
 - Be able to reserve a parking spot for a limited amount of time and if the user wants, can rebook it. 
 - Built in payment system. 
@@ -35,6 +36,38 @@ The website will be build using the following technologies:
 - **Backend:** MySQL, PHPMyAdmin, Laravel.  
 - **Deployment:** Forge. 
 - **Provider:** Digital Ocean.
+
+
+### Rough Roadmap
+## Mandatory
+### Phase 1 - Planning (01.11.2023 - 02.11.2023)
+- Figma and Co.
+- Elaborate concept.
+- Create a LoHi wireframe.
+- Determine design.
+
+### Phase 2 - Basic functions (06.11.2023 - 10.11.2023)
+- Creating the HiFi wireframe.
+- Create Database Schema. 
+- Building the basic structure of the website.
+- Home page (homepage).
+- About me/imoressum page. 
+- Login page.
+- Register page.
+- Create database Models, Controllers, and Seeders.
+
+## Optional
+### Phase 3 - Aditional functions (13.11.2023 - 24.11.2023)
+- Let one user reserve multiple parking spots but reserved only to that user, so another user cannot reserve a parkingspot that was already reserved.
+- Show a list of the parking spots that the user has reserved.
+- Light/dark mode toggle. 
+- Language translation to Spanish and German. 
+- Be able to reserve a parking spot for a limited amount of time and if the user wants, can rebook it. 
+
+
+
+### Phase 4 - Improvements, Testing and Bug-fixing. 
+. . . (work in progress) . . .
 
 
 # Links
