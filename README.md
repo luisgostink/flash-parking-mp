@@ -44,6 +44,27 @@ https://github.com/luisgostink/flash-parking-mp
 ## Figma
 https://www.figma.com/file/UI7dQoyZDWdm7u76XeVCxg/PROJECTS?type=design&node-id=295-3&mode=design&t=WOoLGAMQ22BcOIMB-0
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Update
 - Working on macOS (24th Oct.)
-- Readme.md updated. ()
+- Readme.md updated. (1st Nov.)
