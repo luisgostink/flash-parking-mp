@@ -38,6 +38,7 @@ The website will be build using the following technologies:
 - **Provider:** Digital Ocean.
 
 
+<<<<<<< Updated upstream
 ### Rough Roadmap
 ## Mandatory
 ### Phase 1 - Planning (01.11.2023 - 02.11.2023)
@@ -70,6 +71,8 @@ The website will be build using the following technologies:
 . . . (work in progress) . . .
 
 
+=======
+>>>>>>> Stashed changes
 # Links
 ## Github 
 https://github.com/luisgostink/flash-parking-mp
