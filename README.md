@@ -56,11 +56,11 @@ The website will be build using the following technologies:
 - Login page.
 - Register page.
 - Create database Models, Controllers, and Seeders.
+- Show a list of the parking spots that the user has reserved.
 
 ## Optional
 ### Phase 3 - Aditional functions (13.11.2023 - 24.11.2023)
 - Let one user reserve multiple parking spots but reserved only to that user, so another user cannot reserve a parkingspot that was already reserved.
-- Show a list of the parking spots that the user has reserved.
 - Light/dark mode toggle. 
 - Language translation to Spanish and German. 
 - Be able to reserve a parking spot for a limited amount of time and if the user wants, can rebook it. 
