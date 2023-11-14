@@ -1,0 +1,25 @@
+@import "colors.scss";
+
+.header {
+    background-color: $bg-color;
+    font-family: 'Inter';
+
+}
+
+.nav-wrapper{
+    font-weight: 900;
+    display: flex;
+   
+}
+
+.logo{ 
+    margin: 25px 0px 25px 50px
+}
+
+.spacer {
+    flex: 1;
+}
+
+.menu {
+    margin-right: 25px;
+}
