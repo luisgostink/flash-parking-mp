@@ -20,15 +20,10 @@
     </head>
     <body>
     <main>
-        <header class="header">
-            <div class="nav-wrapper">
-                <img src="{{ asset('icons/fast_parking.svg') }}" class="logo" alt="logo">
-                <div class="spacer"></div>
-                <img src="{{ asset('icons/menu.svg')}}" class="menu" alt="menu">
-            </div>
-        </header>
+       @include('header')
+
         <section class="flex-container">
-            <div class="title">
+            <div>
                 <img src="{{ asset('icons/title-logo.svg') }}" class="title-logo" alt="title-logo">
             </div>
             <div class="slogan"> 
@@ -42,10 +37,7 @@
                     Reserve now! 
                 </button>
             </div>
-            <footer class="flex-container footer">
-                <img src="{{ asset('icons/fast_parking.svg') }}" class="logo" alt="logo">
-                <img src="{{ asset('icons/copyright.svg') }}" class="logo" alt="copyright"> 
-            </footer>
+          @include('footer')
         </section>
         
     </main>

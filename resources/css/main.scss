@@ -2,10 +2,12 @@
 
 body {
     background-image: $bg-image;
+    background-position: center; 
 }
 
 .header {
     font-family: 'Inter', sans-serif;
+    margin-bottom: 50px;
 
 }
 
@@ -18,7 +20,7 @@ body {
 
 .logo{ 
     margin: 25px 0px 25px 200px;
-    height: 120px; 
+    height: 100px; 
 }
 
 .spacer {
@@ -27,7 +29,7 @@ body {
 
 .menu {
     margin-right: 200px;
-    height: 60px;  
+    height: 50px;  
 }
 
 .flex-container {
@@ -36,13 +38,6 @@ body {
     align-items: center;
 }
 
-.title {
-    text-shadow: 3px 3px $bg-dropdown;
-    font-family: 'Inter', sans-serif;
-    font-size: 30px;
-    font-weight: 900;
-    text-transform: uppercase;
-}
 
 .title-logo {
     height: 100px;
