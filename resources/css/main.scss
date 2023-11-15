@@ -1,19 +1,24 @@
 @import "colors.scss";
 
+body {
+    background-image: $bg-image;
+}
+
 .header {
-    background-color: $bg-color;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
 
 }
 
 .nav-wrapper{
     font-weight: 900;
     display: flex;
+    align-items: center;
    
 }
 
 .logo{ 
-    margin: 25px 0px 25px 50px
+    margin: 25px 0px 25px 200px;
+    height: 120px; 
 }
 
 .spacer {
@@ -21,5 +26,64 @@
 }
 
 .menu {
-    margin-right: 25px;
+    margin-right: 200px;
+    height: 60px;  
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-shadow: 3px 3px $bg-dropdown;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.title-logo {
+    height: 100px;
+}
+
+
+ .slogan {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    margin: 0; 
+ }
+
+ .description {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 30px;
+    margin: 100px 0px 100px 0px ;
+ }
+
+ .reserve {
+    width: 395px;
+    height: 90px;
+    background-color: $bg-dropdown;
+    border: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+ }
+
+ .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    margin-bottom: 2px;
+ }
+ 
