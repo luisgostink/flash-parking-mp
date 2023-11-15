@@ -18,8 +18,8 @@ return new class extends Migration
             $table->longText('address');
             $table->dateTime('blocked_until')->nullable();
             $table->boolean('ev_charging')->default(true);
-            $table->float('latitude');
-            $table->float('longitude');
+            $table->float('latitude', 9, 6);
+            $table->float('longitude', 9, 6);
             $table->timestamps();
         });
     }
