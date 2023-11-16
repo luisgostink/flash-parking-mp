@@ -12,8 +12,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
         
         @vite(['resources/css/main.scss', 'resources/js/app.js'])
-  
-        <!-- Styles -->
+
+              <!-- Styles -->
         <style>
             
         </style>
@@ -37,9 +37,12 @@
                     Reserve now! 
                 </button>
             </div>
-          @include('footer')
-        </section>
+            <div>
+                @include('footer')
+                <div class="spacer"></div>
+            </div>
         
+        </section>
     </main>
     </body>
 </html>

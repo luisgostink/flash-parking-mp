@@ -1,4 +1,3 @@
-
 <header class="header">
     <div class="nav-wrapper">
         <img src="{{ asset('icons/fast_parking.svg') }}" class="logo" alt="logo">
