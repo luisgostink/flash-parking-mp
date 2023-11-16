@@ -15,14 +15,14 @@
 
               <!-- Styles -->
         <style>
-            
+
         </style>
     </head>
     <body>
     <main>
        @include('header')
-
         <section class="flex-container">
+            <div id="background-img"></div>
             <div>
                 <img src="{{ asset('icons/title-logo.svg') }}" class="title-logo" alt="title-logo">
             </div>

@@ -1,6 +1,6 @@
 @import "colors.scss";
 
-body {
+#background-img {
     background-image: $bg-image;
     background-position: center; 
 }
@@ -83,4 +83,15 @@ body {
     align-items: center;
  
  }
- 
+
+
+
+.container {
+    border: 4px solid black;
+    box-shadow: 3px 3px $bg-dropdown;
+   
+    padding: 20px;
+    border-radius: 6.45px;
+    text-align: justify;
+    background-color: $bg-color;
+}
