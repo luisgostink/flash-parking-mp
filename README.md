@@ -78,6 +78,16 @@ https://github.com/luisgostink/flash-parking-mp
 https://www.figma.com/file/UI7dQoyZDWdm7u76XeVCxg/PROJECTS?type=design&node-id=295-3&mode=design&t=WOoLGAMQ22BcOIMB-0
 
 
+# TO DO List:
+## Frontend 
+[] Footer alignment.
+[] All pages basic design.
+[] Dropdown menu. 
+## Backend
+[] Make Controllers. 
+[] Show data from the DB. 
+
+
 
 
 
