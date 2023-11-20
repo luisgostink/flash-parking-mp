@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/welcome2', function () {
+    return view('welcome2');
+})->name ('welcome2');
+
 // Parking list
 Route::get('/book_parking',  function () {
     return view('book_parking');
