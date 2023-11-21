@@ -13,9 +13,7 @@
             
             <div>
                 <a href="{{ route('confirm_booking') }}">
-                    <button class="reserve">
-                        Confirm now!
-                    </button>
+                    <button class="reserve">Confirm now!</button>
                 </a>
             </div>
         </section>

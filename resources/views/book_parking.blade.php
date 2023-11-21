@@ -7,9 +7,7 @@
 
             <div>
                 <a href="{{ route('booking_detailed') }}">
-                    <button class="reserve">
-                        Reserve now!
-                    </button>
+                    <button class="reserve">Reserve now!</button>
                 </a>
             </div>
         </section>

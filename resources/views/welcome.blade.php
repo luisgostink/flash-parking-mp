@@ -16,9 +16,7 @@
             </div>
             <div>
                 <a href="{{ route('book_parking') }}">
-                    <button class="reserve">
-                        Reserve now!
-                    </button>
+                    <button class="reserve">Reserve now!</button>
                 </a>
             </div>
             @endsection
