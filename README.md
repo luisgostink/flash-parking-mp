@@ -80,9 +80,9 @@ https://www.figma.com/file/UI7dQoyZDWdm7u76XeVCxg/PROJECTS?type=design&node-id=2
 
 # TO DO List:
 ## Frontend 
-- [ ] Footer alignment.
-- [ ] All pages basic design.
-- [ ] Dropdown menu. 
+- [x] Footer alignment.
+- [x] All pages basic design.
+- [x] Dropdown menu. 
 
 ## Backend
 - [ ] Make Controllers. 
