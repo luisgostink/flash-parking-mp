@@ -18,34 +18,63 @@
     <main>
         <header class="header">
             <div class="nav-wrapper">
-                <img src="{{ asset('icons/fast_parking.svg') }}" class="logo" alt="logo">
+                <div class="menu-dropdown" id="main-nav">
+                    <header class="header">
+                        <div class="nav-wrapper">
+                            <a href="/">
+                                <img src="{{ asset('icons/fast_parking_white.svg') }}" class="logo" alt="logo">
+                            </a>
+                            <div class="spacer"></div>
+                            <button class="menu-btn">
+                                <img src="{{ asset('icons/menu_white.svg')}}" alt="menu button" onclick="toggle();">
+                            </button>
+                        </div>
+                    </header>
+                    <div class="flex-container menu-items">
+                        <div><a href="{{'/'}}" class="active">Home</a></div>
+                        <div><a href={{'about_me'}}>About me</a></div>
+                        <div><a href={{ route('login') }}>Login</a></div>
+                        <div><a href={{'book_parking'}}>Reserve</a></div>
+                    </div>
+
+                    <footer class="footer">
+                        <hr>
+                        <div class="footer-container">
+                            <img src="{{ asset('icons/copyright.svg') }}" class="copyright" alt="copyright">
+                            <img src="{{ asset('icons/fast_parking_white.svg') }}" class="footer-logo" alt="footer-logo">
+                        </div>
+                    </footer>
+                    
+                </div>
+
+                <a href="/">
+                    <img src="{{ asset('icons/fast_parking.svg') }}" class="logo" alt="logo" onclick="">
+                </a>
                 <div class="spacer"></div>
                 <button class="menu-btn">
-                    <img src="{{ asset('icons/menu.svg')}}" class="menu-btn" alt="menu button" onclick="toggle();">
-                    Hello
-                </button>
-                <div class="menu-dropdown" id="main-nav">
-                    <a href="#home" class="active">Home</a>
-                    <a href="#about">About Me</a>
-                    <a href="#login">Login</a>
-                    <a href="#reserve">Reserve</a>
-                </div>
+                    <img src="{{ asset('icons/menu.svg')}}" alt="menu button" onclick="toggle();">
+                </button>   
             </div>
         </header>
 
         @yield('content')
         
-        <footer class="flex-container footer">
-            <img src="{{ asset('icons/copyright.svg') }}" class="menu" alt="copyright">
-            <img src="{{ asset('icons/fast_parking.svg') }}" class="logo" alt="logo">
+        <footer class="footer">
+            <hr>
+            <div class="footer-container">
+                <img src="{{ asset('icons/copyright.svg') }}" class="copyright" alt="copyright">
+                <img src="{{ asset('icons/fast_parking.svg') }}" class="footer-logo" alt="footer-logo">
+            </div>
         </footer>
     </main>
 
     <script>
         function toggle() {
-        document.getElementById('main-nav').classList.toggle('active')
-        console.log('toggle')
-    }
+            document.getElementById('main-nav').classList.toggle('active')
+            // document.getElementById('description').hidden = true
+            console.log('toggle')
+        }
     </script>
+
 </body>
 </html>

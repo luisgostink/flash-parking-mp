@@ -7,6 +7,9 @@ window.Alpine = Alpine;
 Alpine.start();
 
 // function toggle() {
-//     document.getElementById('main-nav').classList.toggle('active')
-//     console.log('toggle')
+//     // window.onload = (event)=>
+//     {
+//         document.getElementById('main-nav').classList.toggle('active');
+//         console.log('toggle');
+//     }
 // }

@@ -11,10 +11,8 @@
                 <p>EV Charging: </p>
             </div>
             
-
-
             <div>
-                <a href="{{ route('booking_detailed') }}">
+                <a href="{{ route('confirm_booking') }}">
                     <button class="reserve">
                         Confirm now!
                     </button>
