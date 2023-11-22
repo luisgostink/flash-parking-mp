@@ -82,11 +82,16 @@ https://www.figma.com/file/UI7dQoyZDWdm7u76XeVCxg/PROJECTS?type=design&node-id=2
 ## Frontend 
 - [x] Footer alignment.
 - [x] All pages basic design.
-- [x] Dropdown menu. 
+- [x] Dropdown menu.
+- [ ] Add the car.svg to all the reserve buttons and make the slide right animation.
+- [ ] Change color of the dropdown menu elements.
 
 ## Backend
 - [ ] Make Controllers. 
-- [ ] Show data from the DB. 
+- [ ] Show data from the DB.
+- [ ] Redirect to Book_Parking.blade with the middleware. after clicking on reserve now.
+- [ ] How to define the user location.
+- [ ] Calculate distance between the user location and all the available parking spots.
 
 
 
