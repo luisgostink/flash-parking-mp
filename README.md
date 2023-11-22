@@ -85,6 +85,7 @@ https://www.figma.com/file/UI7dQoyZDWdm7u76XeVCxg/PROJECTS?type=design&node-id=2
 - [x] Dropdown menu.
 - [ ] Add the car.svg to all the reserve buttons and make the slide right animation.
 - [ ] Change color of the dropdown menu elements.
+- [ ] Complete edit of the login/create account page. 
 
 ## Backend
 - [ ] Make Controllers. 
