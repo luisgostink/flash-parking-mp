@@ -15,7 +15,7 @@
                 <p>Say goodbye to parking hassles and long searches.  Find the perfect  spot quickly and easily.</p>
             </div>
             <div>
-                <a href="{{ route('book_parking') }}">
+                <a href="{{ route('login') }}">
                     <button class="reserve">Reserve now!</button>
                 </a>
             </div>

@@ -75,6 +75,5 @@
             console.log('toggle')
         }
     </script>
-
 </body>
 </html>

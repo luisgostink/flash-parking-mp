@@ -15,6 +15,14 @@
    }
 }
 
+#email {
+    border: 2px solid $bg-dropdown;
+}
+
+#password {
+    border: 2px solid $bg-dropdown;
+}
+
 // #description {
 //     background-color: $bg-dropdown;
 //     width: 100%;
@@ -71,7 +79,7 @@
     font-family: $main-font;
     font-weight: 700;
     text-transform: uppercase;
-    color: black;
+    color: white;
     font-size: 50px;
     text-decoration: none;
 }
