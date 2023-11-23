@@ -9,7 +9,7 @@
                 <img src="{{ asset('icons/profile-pic.png') }}" class="profile-img" alt="profile-img">
             </div>
             
-            <div class="description container">
+            <div class="description container-2">
                 <p> Hello!  My name is Luis Gostin. 
                     I always define myself first as a musician 
                     because it's my first love, 
@@ -19,7 +19,7 @@
                 </p>
             </div>
 
-            <div class="description container">
+            <div class="description container-2">
                 <p> Hello!  My name is Luis Gostin. 
                     I always define myself first as a musician 
                     because it's my first love, 

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ParkingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +26,8 @@ Route::get('/welcome2', function () {
 })->name ('welcome2');
 
 // Parking list
-Route::get('/book_parking',  function () {
-    return view('book_parking');
-})->name ('book_parking');
+Route::get('/book_parking', [ParkingController::class, 'show_parking'])->name('parking_list');
+  
 
 // Booking_detailed
 Route::get('/booking_detailed',  function () {
@@ -43,15 +44,21 @@ Route::get('/about_me',  function () {
     return view('about_me');
 })->name ('about_me');
 
-/* 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard'); */
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+
+
+
+
 
 require __DIR__.'/auth.php';

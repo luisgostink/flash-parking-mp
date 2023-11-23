@@ -21,6 +21,10 @@ class ProfileController extends Controller
         ]);
     }
 
+    // show logged user on booking page.
+
+   
+
     /**
      * Update the user's profile information.
      */

@@ -31,10 +31,10 @@
                         </div>
                     </header>
                     <div class="flex-container menu-items">
-                        <div><a href="{{'/'}}" class="active">Home</a></div>
-                        <div><a href={{'about_me'}}>About me</a></div>
-                        <div><a href={{ route('login') }}>Login</a></div>
-                        <div><a href={{'book_parking'}}>Reserve</a></div>
+                        <div><a href="{{'/'}}" class="active" style= "text-decoration: none" >Home</a></div>
+                        <div><a href="{{'about_me'}}" style= "text-decoration: none" >About me</a></div>
+                        <div><a href="{{ route('login')}}" style= "text-decoration: none">Login</a></div>
+                        <div><a href="{{'book_parking'}}" style= "text-decoration: none">Reserve</a></div>
                     </div>
 
                     <footer class="footer">
@@ -48,7 +48,7 @@
                 </div>
 
                 <a href="/">
-                    <img src="{{ asset('icons/fast_parking.svg') }}" class="logo" alt="logo" onclick="">
+                    <img src="{{ asset('icons/fast_parking.svg') }}" class="logo" alt="logo">
                 </a>
                 <div class="spacer"></div>
                 <button class="menu-btn">
