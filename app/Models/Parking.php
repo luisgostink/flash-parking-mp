@@ -16,5 +16,6 @@ class Parking extends Model
         'ev_charging',
         'latitude',
         'longitude',
+        'map_frame',
     ];
 }

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->boolean('ev_charging')->default(true);
             $table->float('latitude', 9, 6);
             $table->float('longitude', 9, 6);
+            $table->longText('map_frame');
             $table->timestamps();
         });
     }
