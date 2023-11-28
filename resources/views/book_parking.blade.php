@@ -20,7 +20,7 @@
                 <p class="description">Distance: TBD </p> 
                 <p class="description">EV Charging: {{$parking->ev_charging}}</p>
                 <div>
-                    <a href="{{ route('booking_detailed') }}">
+                    <a href="booking_detailed/{{$parking->id}}">
                         <button class="details-btn flex-container">View details</button>
                     </a>
                 </div>

@@ -16,7 +16,12 @@ class ParkingController extends Controller
 
     }
 
-
+    // show selected parking spot.
+    public function show($id){
+        $parkingSpots = Parking::find($id);
+        // dd('show');
+        return view('booking_detailed', ['parkingSpots' => $parkingSpots]);
+    }
     
 
 

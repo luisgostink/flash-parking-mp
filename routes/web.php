@@ -27,12 +27,14 @@ Route::get('/welcome2', function () {
 
 // Parking list
 Route::get('/book_parking', [ParkingController::class, 'show_parking'])->name('parking_list');
-  
 
 // Booking_detailed
 Route::get('/booking_detailed',  function () {
     return view('booking_detailed');
 })->name ('booking_detailed');
+
+// show selected parking.
+Route::get('/booking_detailed/{id}', [ParkingController::class, 'show'])->name('parking_details');
 
 // Confirm Booking 
 Route::get ('/confirm_booking', function (){
@@ -45,9 +47,9 @@ Route::get('/about_me',  function () {
 })->name ('about_me');
 
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
