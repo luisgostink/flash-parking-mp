@@ -4,7 +4,6 @@
         <section class="flex-container">
             <h1 class="title">Parking Title</h1>
 
-            
             <div class="description">
                 <p class=>Adress: </p>
                 <p>EV Charging: </p>
