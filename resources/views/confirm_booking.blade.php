@@ -5,7 +5,7 @@
             <h1 class="parking-title">Congratulations [USER]</h1>
             <p class="description">Your parking spot is reserved!</p>
 
-            <img src="{{ asset('icons/verified.svg') }}" class="title-logo" alt="title-logo">
+            <img src="{{ asset('icons/verified.svg') }}" class="verified" alt="">
 
 
             <div class="description">
