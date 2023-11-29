@@ -10,11 +10,21 @@
             <p class="description">Address: {{$parkingSpots->address}}</p>
             <p class="description">Distance: TBD </p> 
             <p class="description">EV Charging: {{$parkingSpots->ev_charging}}</p>
-            
-            <div>
-                <a href="{{ route('confirm_booking') }}">
-                    <button class="reserve">Confirm now!</button>
-                </a>
+
+          
+            <div class="flex-container container-2"> 
+                <form method="post" action="/confirm_booking/{{$parkingSpots->id}}"> {{-- Send the time and the ID of the selected parking spot--}}
+                    @csrf
+
+                    <div class="reservation">
+                        <label for="reservation_time">Reservation Time:</label>
+                        <input class="time" type="time" name="reservation_time" value="{{ old('reservation_time') }}" required>
+                    </div>    
+
+                    <div>
+                        <button class="reserve" type="submit">Confirm now!</button>
+                    </div>
+                </form>
             </div>
         </section>
         @endsection

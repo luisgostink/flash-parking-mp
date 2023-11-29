@@ -2,7 +2,7 @@
 
         @section('content')
         <section class="flex-container">
-            <h1 class="parking-title">Congratulations [USER]</h1>
+            <h1 class="parking-title">Congratulations {{$user->name}}</h1>
             <p class="description">Your parking spot is reserved!</p>
 
             <img src="{{ asset('icons/verified.svg') }}" class="verified" alt="">

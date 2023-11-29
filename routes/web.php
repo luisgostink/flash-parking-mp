@@ -37,9 +37,7 @@ Route::get('/booking_detailed',  function () {
 Route::get('/booking_detailed/{id}', [ParkingController::class, 'show'])->name('parking_details');
 
 // Confirm Booking 
-Route::get ('/confirm_booking', function (){
-    return view('confirm_booking');
-})->name('confirm_booking');
+Route::post ('/confirm_booking/{id}', [ParkingController::class, 'confirm_booking'])->name('confirm_booking');
 
 // About me
 Route::get('/about_me',  function () {
