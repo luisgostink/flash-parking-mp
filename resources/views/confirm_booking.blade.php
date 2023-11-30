@@ -15,7 +15,7 @@
             
             <div>
               {{--  <a class="reserve" href="{{ route('confirm_booking') }}">
-                    Reserve now
+                    Navigate
                 </a>--}}
             </div>
         </section>
