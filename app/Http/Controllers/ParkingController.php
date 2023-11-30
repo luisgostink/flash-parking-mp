@@ -14,9 +14,15 @@ class ParkingController extends Controller
 
     public function show_parking(){
         $user = auth()->user(); 
-        $parkingSpots = Parking::all();
-        return view('book_parking', ['parkingSpots' => $parkingSpots, 'user' => $user]);
 
+        $currentDateTime = now(); // Assuming you have Carbon or similar for working with dates and times
+
+        $parkingSpots = Parking::where(function ($query) use ($currentDateTime) {
+            $query->where('blocked_until', '<', $currentDateTime)
+                ->orWhere('blocked_until', null);
+        })->get();
+        
+        dd($parkingSpots); 
     }
 
     // show selected parking spot.

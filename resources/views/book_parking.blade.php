@@ -14,6 +14,9 @@
             </div>
 
             @foreach($parkingSpots as $parking)
+
+            @if ($parking->blocked_until == null)
+            
             <div class="parking-container">
                 <h1 class="parking-title">{{$parking->name}}</h1>
                 <p class="description">Address: {{$parking->address}}</p>
@@ -25,6 +28,8 @@
                     </a>
                 </div>
             </div>
+            @else
+            @endif
                 @endforeach
             </section>
         @endsection
