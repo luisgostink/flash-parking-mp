@@ -1,0 +1,286 @@
+@import "colors.scss";
+
+#background-img {
+   height: 100vh;
+   width: 100vw; 
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+   }
+}
+
+#email {
+    border: 2px solid $bg-dropdown;
+}
+
+#password {
+    border: 2px solid $bg-dropdown;
+}
+
+// #description {
+//     background-color: $bg-dropdown;
+//     width: 100%;
+//     text-align: center;
+//  }
+
+
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.logo{ 
+    margin: 25px 0px 25px 200px;
+    height: 80px; 
+}
+
+.spacer {
+    flex: 1;
+}
+
+.menu-btn {
+    margin-right: 200px;
+    height: 40px;  
+    width: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.menu-dropdown{
+    height: 100vh;
+    width: 100vw; 
+    background-color: $bg-dropdown;
+    position: fixed;
+    top: -100vh; 
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+    z-index: 10;
+    &.active {
+        transform: translateY(100%);
+    }
+}
+
+.menu-items {
+    gap: 80px;
+    font-family: $main-font;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: green;
+    text-shadow: 3px 3px white;
+    font-size: 50px;
+}
+
+a{
+    color: black;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    text-shadow: 3px 3px $bg-dropdown ; 
+}
+
+.parking-title{
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+}
+
+.title-logo {
+    height: 100px;
+    margin-top: 0;
+}
+
+ .slogan {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    margin: 0; 
+ }
+
+ .description {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 30px;
+    margin: 50px 0px 50px 0px ;
+ }
+
+ .reserve {
+    width: 300px;
+    height: 80px;
+    background-color: $bg-dropdown;
+    border: 4px solid black;
+    border-radius: 6.45px;
+    color: black;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+ }
+
+ .footer {
+    bottom: 0;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-top: 100px; 
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+ }
+
+ .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+ }
+
+ hr { 
+    border-top: 3px solid black;
+    margin-bottom: 20px;
+    width: 100vw;
+} 
+
+
+
+ .footer-logo {
+    height: 40px; 
+ }  
+ 
+
+ .copyright {
+    height: 30px;
+ }
+
+.parking-container {
+    border: 4px solid black;
+    box-shadow: 5px 5px $bg-dropdown;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+    border-radius: 6.45px;
+    text-align: left;
+    background-color: $bg-color;
+    width: 700px;
+}
+
+.container-2 {
+    border: 4px solid black;
+    box-shadow: 5px 5px $bg-dropdown;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    border-radius: 6.45px;
+    text-align: center;
+    background-color: $bg-color;
+    width:800px;
+}
+
+.location {
+    border: 4px solid black;
+    box-shadow: 5px 5px black;   
+    padding: 30px;
+    margin-bottom: 50px;
+    border-radius: 6.45px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pathway Gothic One', sans-serif;
+    line-height: 10px;
+    gap: 50px;
+    background-color: $bg-dropdown;
+    height: 50px;
+    width: 90%;
+}
+
+.inputloc {
+    font-family: 'Pathway Gothic One', sans-serif;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.available-btn {
+    width: 120px;
+    height: 35px;
+    background-color: black;
+    border-radius: 6.45px;
+    color: white;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.details-btn {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    background-color: $bg-dropdown;
+    border-radius: 6.45px;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 25px; /* Align text vertically in the middle */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    
+}
+
+
+.title {
+    margin-bottom: 20px;
+}
+
+.verified {
+    height: 150px;
+    width: 150px;
+}
+
+.reservation {
+    display: flex;
+    gap: 20px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 30px;
+    padding: 30px;
+}
+
+
+.time {
+    padding: 10px; /* Adjust the padding to your liking */
+    font-size: 25px; /* Adjust the font size to your liking */
+    font-family: 'Pathway Gothic One', sans-serif;;
+    border: 3px solid $bg-dropdown; /* Add a border to the input */
+    width: 100px;
+    border-radius: 5px; /* Add rounded corners */
+    margin-bottom: 10px; /* Add some space below the input */
+}
+
