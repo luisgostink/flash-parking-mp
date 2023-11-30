@@ -41,7 +41,7 @@ class ParkingController extends Controller
     $user = auth()->user(); 
     $parkingSpots = Parking::find($id);
 
-    // Write a new entry or overwrite the entry in the DB. 
+    // Write data from the form in the DB. 
     $parkingSpots->blocked_until = $request->reservation_time; 
     $parkingSpots->save(); 
     return view('confirm_booking', ['parkingSpots' => $parkingSpots, 'user' => $user, 'id' => $id]);
