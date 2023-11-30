@@ -19,6 +19,9 @@
                     <div class="reservation">
                         <label for="reservation_time">Reservation Time:</label>
                         <input class="time" type="time" name="reservation_time" value="{{ old('reservation_time') }}" required>
+                        @error('reservation_time')
+                            <div>{{$message}}</div>
+                        @enderror
                     </div>    
 
                     <div>
