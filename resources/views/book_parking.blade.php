@@ -15,21 +15,22 @@
 
             @foreach($parkingSpots as $parking)
 
-            @if ($parking->blocked_until == null)
-            
             <div class="parking-container">
                 <h1 class="parking-title">{{$parking->name}}</h1>
                 <p class="description">Address: {{$parking->address}}</p>
                 <p class="description">Distance: TBD </p> 
-                <p class="description">EV Charging: {{$parking->ev_charging}}</p>
+                <p class="description"> EV Charging:
+                    <label for="ev_charging">
+                        <input type="checkbox" {{ $parking->ev_charging ? 'checked' : '' }} disabled>
+                        {{ $parking->ev_charging ? 'Yes' : 'No' }}
+                    </label>
+                </p>
                 <div>
-                    <a href="booking_detailed/{{$parking->id}}">
-                        <button class="details-btn flex-container">View details</button>
+                    <a class="details-btn flex-container" href="booking_detailed/{{$parking->id}}">
+                        View details
                     </a>
                 </div>
             </div>
-            @else
-            @endif
-                @endforeach
+            @endforeach
             </section>
         @endsection

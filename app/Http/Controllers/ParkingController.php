@@ -18,11 +18,12 @@ class ParkingController extends Controller
         $currentDateTime = now(); // Assuming you have Carbon or similar for working with dates and times
 
         $parkingSpots = Parking::where(function ($query) use ($currentDateTime) {
-            $query->where('blocked_until', '<', $currentDateTime)
-                ->orWhere('blocked_until', null);
+            $query->where('blocked_until', '<', $currentDateTime) ->orWhere('blocked_until', null);
         })->get();
+
+        return view('book_parking', ['parkingSpots' => $parkingSpots, 'user' => $user]);
         
-        dd($parkingSpots); 
+        // dd($parkingSpots); 
     }
 
     // show selected parking spot.
@@ -42,11 +43,10 @@ class ParkingController extends Controller
     // Request validation
     // $request->validate([
     // 'reservation_time' => 'required|date_format:Y-m-d H:i:s'
+    // ]);
 
-// ]);
     $user = auth()->user(); 
     $parkingSpots = Parking::find($id);
-
     // Write data from the form in the DB. 
     $parkingSpots->blocked_until = $request->reservation_time; 
     $parkingSpots->save(); 

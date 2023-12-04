@@ -9,7 +9,12 @@
 
             <p class="description">Address: {{$parkingSpots->address}}</p>
             <p class="description">Distance: TBD </p> 
-            <p class="description">EV Charging: {{$parkingSpots->ev_charging}}</p>
+            <p class="description"> EV Charging:
+                <label for="ev_charging">
+                    <input type="checkbox" {{ $parkingSpots->ev_charging ? 'checked' : '' }} disabled>
+                    {{ $parkingSpots->ev_charging ? 'Yes' : 'No' }}
+                </label>
+            </p>
 
           
             <div class="flex-container container-2"> 
