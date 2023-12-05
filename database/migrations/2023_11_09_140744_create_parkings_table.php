@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('parkings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->nullable()->default(null)->constrained('users');
             $table->longText('name');
             $table->longText('address');
             $table->dateTime('blocked_until')->nullable();

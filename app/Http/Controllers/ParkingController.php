@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Parking;
+
 use Carbon\Carbon; 
 
 class ParkingController extends Controller
@@ -49,7 +50,11 @@ class ParkingController extends Controller
     $parkingSpots = Parking::find($id);
     // Write data from the form in the DB. 
     $parkingSpots->blocked_until = $request->reservation_time; 
+    $parkingSpots->user_id = $user->id; 
+    $user->reservations();
+    // dd($user.$parkingSpots); 
     $parkingSpots->save(); 
+
     return view('confirm_booking', ['parkingSpots' => $parkingSpots, 'user' => $user, 'id' => $id]);
 }
 
