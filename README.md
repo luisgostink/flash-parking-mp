@@ -56,11 +56,11 @@ The website will be build using the following technologies:
 - Login page.
 - Register page.
 - Create database Models, Controllers, and Seeders.
+- Show a list of the parking spots that the user has reserved.
 
 ## Optional
 ### Phase 3 - Aditional functions (13.11.2023 - 24.11.2023)
 - Let one user reserve multiple parking spots but reserved only to that user, so another user cannot reserve a parkingspot that was already reserved.
-- Show a list of the parking spots that the user has reserved.
 - Light/dark mode toggle. 
 - Language translation to Spanish and German. 
 - Be able to reserve a parking spot for a limited amount of time and if the user wants, can rebook it. 
@@ -77,6 +77,23 @@ https://github.com/luisgostink/flash-parking-mp
 ## Figma
 https://www.figma.com/file/UI7dQoyZDWdm7u76XeVCxg/PROJECTS?type=design&node-id=295-3&mode=design&t=WOoLGAMQ22BcOIMB-0
 
+
+# TO DO List:
+## Frontend 
+- [x] Footer alignment.
+- [x] All pages basic design.
+- [x] Dropdown menu.
+- [ ] Add the car.svg to all the reserve buttons and make the slide right animation.
+- [ ] Change color of the dropdown menu elements.
+- [ ] Complete edit of the login/create account page. 
+
+## Backend
+- [x] Make Controllers. 
+- [x] Show data from the DB.
+- [ ] Redirect to Book_Parking.blade with the middleware. after clicking on reserve now.
+- [ ] How to define the user location. (together with Beni)
+- [ ] Calculate distance between the user location and all the available parking spots. (together with Beni). 
+- [ ] Make it work the Reserve parking form and redirect to Confirm Booking page. 
 
 
 

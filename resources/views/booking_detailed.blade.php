@@ -9,7 +9,12 @@
 
             <p class="description">Address: {{$parkingSpots->address}}</p>
             <p class="description">Distance: TBD </p> 
-            <p class="description">EV Charging: {{$parkingSpots->ev_charging}}</p>
+            <p class="description"> EV Charging:
+                <label for="ev_charging">
+                    <input type="checkbox" {{ $parkingSpots->ev_charging ? 'checked' : '' }} disabled>
+                    {{ $parkingSpots->ev_charging ? 'Yes' : 'No' }}
+                </label>
+            </p>
 
           
             <div class="flex-container container-2"> 
@@ -19,6 +24,9 @@
                     <div class="reservation">
                         <label for="reservation_time">Reservation Time:</label>
                         <input class="time" type="time" name="reservation_time" value="{{ old('reservation_time') }}" required>
+                        @error('reservation_time')
+                            <div>{{$message}}</div>
+                        @enderror
                     </div>    
 
                     <div>

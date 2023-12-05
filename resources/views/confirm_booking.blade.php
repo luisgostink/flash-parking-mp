@@ -14,9 +14,9 @@
             </div>
             
             <div>
-                <a href="{{ route('confirm_booking') }}">
-                    <button class="reserve">Navigate!</button>
-                </a>
+              {{--  <a class="reserve" href="{{ route('confirm_booking') }}">
+                    Navigate
+                </a>--}}
             </div>
         </section>
         @endsection
