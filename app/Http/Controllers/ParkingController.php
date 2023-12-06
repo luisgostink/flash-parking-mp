@@ -11,8 +11,6 @@ class ParkingController extends Controller
 {
     // show list of all parking spots.
 
-    // where clause to filter only the available parking spots (unblocked)
-
     public function show_parking(){
         $user = auth()->user(); 
 
@@ -23,8 +21,7 @@ class ParkingController extends Controller
         })->get();
 
         return view('book_parking', ['parkingSpots' => $parkingSpots, 'user' => $user]);
-        
-        // dd($parkingSpots); 
+
     }
 
     // show selected parking spot.
@@ -35,10 +32,10 @@ class ParkingController extends Controller
     }
 
     public function confirm_booking (Request $request, $id){
-    //   dd($request);
 
     //Parse the reservation_time input from the user. 
     $request->reservation_time = Carbon::createFromFormat('Y-m-d H:i', Carbon::now()->toDateString(). " " .$request->reservation_time)->toDateTimeString();
+
     // dd($request->reservation_time); 
 
     // Request validation
@@ -48,16 +45,28 @@ class ParkingController extends Controller
 
     $user = auth()->user(); 
     $parkingSpots = Parking::find($id);
+
     // Write data from the form in the DB. 
     $parkingSpots->blocked_until = $request->reservation_time; 
     $parkingSpots->user_id = $user->id; 
     $user->reservations();
-    // dd($user.$parkingSpots); 
-    $parkingSpots->save(); 
+    $parkingSpots->save();
 
-    return view('confirm_booking', ['parkingSpots' => $parkingSpots, 'user' => $user, 'id' => $id]);
+
+    // Redirect to Google Maps 
+    $latitude = $parkingSpots->latitude;
+    $longitude = $parkingSpots->longitude;
+
+    $navLink = "https://www.google.com/maps/dir/?api=1&destination=$latitude,$longitude";
+
+
+    return view('confirm_booking', [
+        'parkingSpots' => $parkingSpots,
+        'user' => $user,
+        'id' => $id,
+        'navLink' => $navLink
+    ]);
+    }
 }
 
 
-
-}

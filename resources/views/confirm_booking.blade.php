@@ -9,14 +9,13 @@
 
 
             <div class="description">
-                <p>Adress: </p>
-                <p>EV Charging:</p>
+                <p>Adress: {{$parkingSpots->address}}</p>
             </div>
             
             <div>
-              {{--  <a class="reserve" href="{{ route('confirm_booking') }}">
-                    Navigate
-                </a>--}}
+                <a href="{{$navLink}}" target="_blank">
+                        <button class="reserve">Navigate</button>
+                </a>
             </div>
         </section>
         @endsection

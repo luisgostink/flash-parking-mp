@@ -18,7 +18,7 @@
 
           
             <div class="flex-container container-2"> 
-                <form method="post" action="/confirm_booking/{{$parkingSpots->id}}"> {{-- Send the time and the ID of the selected parking spot--}}
+                <form method="post" action="{{ route('confirm_booking', ['id' => $parkingSpots->id]) }}"> {{-- Send the time and the ID of the selected parking spot--}}
                     @csrf
 
                     <div class="reservation">
