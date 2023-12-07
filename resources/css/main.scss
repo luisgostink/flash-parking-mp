@@ -207,6 +207,7 @@
     padding: 30px;
     margin-bottom: 50px;
     border-radius: 6.45px;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     font-family: 'Pathway Gothic One', sans-serif;
@@ -308,4 +309,13 @@
      margin-left: 10px;
      margin-right: 10px;
     }
+}
+
+.location-logo {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 50%;
+        right: 5px; /* Adjust the right position as needed */
+        transform: translateY(-50%);
 }

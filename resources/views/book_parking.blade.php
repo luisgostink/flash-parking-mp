@@ -8,6 +8,7 @@
                 <form id="locationForm">
                     <div class="flex-container">
                         <input class="inputloc"type="text" id="location" name="location" placeholder="Current Location" required>   
+                        <img src="{{ asset('icons/location.svg') }}" class="location-logo" alt="location-logo">
                         <button class="available-btn " type="submit">View availability</button>
                     </div>
                 </form>
