@@ -287,3 +287,17 @@
     margin-bottom: 10px; /* Add some space below the input */
 }
 
+.register {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 50px; 
+}
+
+.login {
+    background-color: $bg-dropdown !important;
+    color: black !important;
+    border: 2px solid black !important;
+}
+

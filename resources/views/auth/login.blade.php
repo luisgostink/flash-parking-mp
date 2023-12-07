@@ -1,5 +1,3 @@
-
-
 @extends('layouts/layout_centered')
 @section('content')
 
@@ -44,7 +42,11 @@
                 </a>
             @endif
 
-            <x-primary-button class="ml-3">
+            <x-primary-button class="register" href="{{ route('register') }}">
+                {{ __('Register') }}
+            </x-primary-button>
+
+            <x-primary-button class="ml-3 login">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
