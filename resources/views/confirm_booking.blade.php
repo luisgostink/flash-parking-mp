@@ -13,8 +13,8 @@
             </div>
             
             <div>
-                <a href="{{$navLink}}" target="_blank">
-                        <button class="reserve">Navigate</button>
+                <a class="reserve" href="{{$navLink}}" target="_blank">
+                    Navigate
                 </a>
             </div>
         </section>

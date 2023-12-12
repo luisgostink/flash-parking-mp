@@ -1,13 +1,41 @@
 @extends('layouts/layout_centered')
 
+<script {{--src = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCDKuPS4DK2CDWaA1ZuEbVJmHiGqGFjr7g"--}}>
+
+// const  getLocation = document.getElementById('location');
+
+// getLocation.addEventListener("click", () => {
+//     navigator.geolocation.getCurrentPosition(
+//         data => {
+//             console.log(data); 
+//         },
+//         error => console.log(error)
+//     );
+// }); 
+
+function getLocation() {
+const successCallback = (position) => {
+  console.log(position);
+};
+
+const errorCallback = (error) => {
+  console.log(error);
+}
+}
+
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+</script>
+
         @section('content')
         <section class="flex-container">
             <h1 class="title">Welcome {{$user->name}}</h1>
 
-            <div class="location" id="location" >
+            <div class="location" >
                 <form id="locationForm">
                     <div class="flex-container">
-                        <input class="inputloc"type="text" id="location" name="location" placeholder="Current Location" required>   
+                        <button id="location" class="available-btn" onclick="getLocation"> Get Location </button>
+                       {{-- <input class="inputloc"type="text" name="location" placeholder="Current Location" required>--}}   
                         <img src="{{ asset('icons/location.svg') }}" class="location-logo" alt="location-logo">
                         <button class="available-btn " type="submit">View availability</button>
                     </div>
