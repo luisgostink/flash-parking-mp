@@ -1,29 +1,6 @@
 @extends('layouts/layout_centered')
 
-<script {{--src = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCDKuPS4DK2CDWaA1ZuEbVJmHiGqGFjr7g"--}}>
-
-// const  getLocation = document.getElementById('location');
-
-// getLocation.addEventListener("click", () => {
-//     navigator.geolocation.getCurrentPosition(
-//         data => {
-//             console.log(data); 
-//         },
-//         error => console.log(error)
-//     );
-// }); 
-
-function getLocation() {
-const successCallback = (position) => {
-  console.log(position);
-};
-
-const errorCallback = (error) => {
-  console.log(error);
-}
-}
-
-navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+<script>
 
 </script>
 
