@@ -15,6 +15,10 @@
                 <p>Say goodbye to parking hassles and long searches.  Find the perfect  spot quickly and easily.</p>
             </div>
 
+            <a class="reserve" href="{{ route('login') }}" >
+                Reserve now!
+            </a>
+
             <div class="features" id="features">
                 <div class="column">
                     <!-- Content for the first column, first row -->
@@ -59,11 +63,16 @@
                     Accessible to a global audience, commited with inclusivity. </p>
                 </div>
             </div>
-            <div>
-                <a class="reserve" href="{{ route('login') }}" >
-                        Reserve now!
-                </a>
+            
+            <div class="description" id="description">
+                <p>Still not convinced?</p>
             </div>
+
+            <a class="reserve" href="{{ route('login') }}" >
+                    Try it out!
+                </a>
+            
+        </section>
             @endsection
 
             

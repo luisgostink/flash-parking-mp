@@ -164,7 +164,7 @@
     border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
  }
 
  .footer {
@@ -317,16 +317,28 @@
 
 .register {
     font-family: 'Inter', sans-serif !important;
-    font-size: 12px;
-    display: inline-flex;
-    align-items: center;
-    margin-left: 50px; 
+    font-weight: bold !important;
+    font-size: 12px !important ;
+    text-transform: none !important;
+    text-align: center;
+    margin-left: 85px; 
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 6.45px;
+    width: 80px;
+
 }
 
 .login {
     background-color: $bg-dropdown !important;
     color: black !important;
-    border: 2px solid black !important;
+    margin-left: 10px;
+    border-radius: 6.45px;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px;
+    font-weight: bold !important;
+    text-transform: none !important;
 }
 
 .contact {

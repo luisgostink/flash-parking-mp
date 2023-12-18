@@ -38,10 +38,10 @@ class ParkingController extends Controller
 
     // dd($request->reservation_time); 
 
-    // Request validation
-    // $request->validate([
-    // 'reservation_time' => 'required|date_format:Y-m-d H:i:s'
-    // ]);
+    //  Request validation
+    //  $request->validate([
+    //  'reservation_time' => 'required|date_format:Y-m-d H:i:s'
+    //  ]);
 
     $user = auth()->user(); 
     $parkingSpots = Parking::find($id);

@@ -42,11 +42,11 @@
                 </a>
             @endif
 
-            <x-primary-button class="register" href="{{ route('register') }}">
-                {{ __('Register') }}
-            </x-primary-button>
+            <a class="register" href="{{ route('register') }}">
+              Register
+            </a>
 
-            <x-primary-button class="ml-3 login">
+            <x-primary-button class="login">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>

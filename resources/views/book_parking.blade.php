@@ -1,7 +1,35 @@
 @extends('layouts/layout_centered')
 
 <script>
+    // JavaScript code to fetch and display coordinates
+    function displayCoordinates(position) {
+        const latitudeElement = document.getElementById("latitude");
+        const longitudeElement = document.getElementById("longitude");
 
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        latitudeElement.textContent = latitude.toFixed(6);
+        longitudeElement.textContent = longitude.toFixed(6);
+    }
+
+    function displayError(error) {
+        const latitudeElement = document.getElementById("latitude");
+        const longitudeElement = document.getElementById("longitude");
+
+        latitudeElement.textContent = "Error fetching latitude";
+        longitudeElement.textContent = "Error fetching longitude";
+    }
+
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(displayCoordinates, displayError);
+    } else {
+        const latitudeElement = document.getElementById("latitude");
+        const longitudeElement = document.getElementById("longitude");
+
+        latitudeElement.textContent = "Geolocation is not available in this browser.";
+        longitudeElement.textContent = "Geolocation is not available in this browser.";
+    }
 </script>
 
         @section('content')
@@ -18,6 +46,11 @@
                     </div>
                 </form>
             </div>
+
+            <h1 class="title">Your Coordinates</h1>
+            <p class="description">Latitude: <span id="latitude">Loading...</span></p>
+            <p class="description">Longitude: <span id="longitude">Loading...</span></p>
+
 
             @foreach($parkingSpots as $parking)
 
