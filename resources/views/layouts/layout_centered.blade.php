@@ -33,7 +33,16 @@
                     <div class="flex-container menu-items">
                         <div><a href="{{'/'}}" class="active" style= "text-decoration: none" >Home</a></div>
                         <div><a href="{{'about_me'}}" style= "text-decoration: none" >About me</a></div>
-                        <div><a href="{{ route('login')}}" style= "text-decoration: none">Login</a></div>
+                        <div>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <x-dropdown-link :href="route('logout')" style="text-decoration: none;"
+                                        onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </x-dropdown-link>
+                            </form>
+                        </div>
                         <div><a href="{{'book_parking'}}" style= "text-decoration: none">Reserve</a></div>
                     </div>
 

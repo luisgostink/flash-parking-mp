@@ -36,20 +36,11 @@
         <section class="flex-container">
             <h1 class="title">Welcome {{$user->name}}</h1>
 
-            <div class="location" >
-                <form id="locationForm">
-                    <div class="flex-container">
-                        <button id="location" class="available-btn" onclick="getLocation"> Get Location </button>
-                       {{-- <input class="inputloc"type="text" name="location" placeholder="Current Location" required>--}}   
-                        <img src="{{ asset('icons/location.svg') }}" class="location-logo" alt="location-logo">
-                        <button class="available-btn " type="submit">View availability</button>
-                    </div>
-                </form>
+            <div class="description">
+                <h1 class="parking-title">Your Coordinates</h1>
+                <p>Latitude: <span id="latitude">Loading...</span></p>
+                <p>Longitude: <span id="longitude">Loading...</span></p>
             </div>
-
-            <h1 class="title">Your Coordinates</h1>
-            <p class="description">Latitude: <span id="latitude">Loading...</span></p>
-            <p class="description">Longitude: <span id="longitude">Loading...</span></p>
 
 
             @foreach($parkingSpots as $parking)
@@ -59,11 +50,15 @@
                 <p class="description">Address: {{$parking->address}}</p>
                 <p class="description">Distance: TBD </p> 
                 <p class="description"> EV Charging:
-                    <label for="ev_charging">
-                        <input type="checkbox" {{ $parking->ev_charging ? 'checked' : '' }} disabled>
-                        {{ $parking->ev_charging ? 'Yes' : 'No' }}
-                    </label>
+                    @if($parking->ev_charging)
+                    <img src="{{ asset('icons/ticket.svg') }}" alt="yes">
+                    <span class="ev">Available</span>
+                    @else
+                    <img src="{{ asset('icons/ticket.svg') }}" alt="yes">
+                    <span class="ev">Not Available</span>
+                    @endif
                 </p>
+
                 <div>
                     <a class="details-btn flex-container" href="booking_detailed/{{$parking->id}}">
                         View details
