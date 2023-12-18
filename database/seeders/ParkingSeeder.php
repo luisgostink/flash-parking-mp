@@ -18,8 +18,8 @@ class ParkingSeeder extends Seeder
             'address' => 'Gessnerallee 14, 8001 Zürich',
             'ev_charging' => true,
             'blocked_until' => null, 
-            'latitude' => 47.375255,
-            'longitude' => 8.534919,
+            'latitude' => 47.375167, 
+            'longitude' => 8.534923,
             'map_frame' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.8860524309007!2d8.532355076301027!3d47.37514240393228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a05ba08abe9%3A0x193db20322cc3d7a!2sGessnerallee%2014%2C%208001%20Z%C3%BCrich!5e0!3m2!1sen!2sch!4v1701090133691!5m2!1sen!2sch',
         ],
         [   
