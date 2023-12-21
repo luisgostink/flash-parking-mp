@@ -10,10 +10,13 @@
             <p class="description">Address: {{$parkingSpots->address}}</p>
             <p class="description">Distance: TBD </p> 
             <p class="description"> EV Charging:
-                <label for="ev_charging">
-                    <input type="checkbox" {{ $parkingSpots->ev_charging ? 'checked' : '' }} disabled>
-                    {{ $parkingSpots->ev_charging ? 'Yes' : 'No' }}
-                </label>
+                @if($parkingSpots->ev_charging)
+                <img src="{{ asset('icons/ticket.svg') }}" alt="available">
+                <span class="ev">Available</span>
+                @else
+                <img src="{{ asset('icons/ticket.svg') }}" alt="not available">
+                <span class="ev">Not Available</span>
+                @endif
             </p>
 
           
@@ -37,5 +40,3 @@
             </div>
         </section>
         @endsection
-
- 
