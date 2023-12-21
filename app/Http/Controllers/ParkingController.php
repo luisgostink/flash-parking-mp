@@ -31,12 +31,12 @@ class ParkingController extends Controller
         return view('booking_detailed', ['parkingSpots' => $parkingSpots]);
     }
 
-    public function confirm_booking (Request $request, $id){
+    public function book_parking (Request $request, $id){
 
     //Parse the reservation_time input from the user. 
     $request->reservation_time = Carbon::createFromFormat('Y-m-d H:i', Carbon::now()->toDateString(). " " .$request->reservation_time)->toDateTimeString();
 
-    // dd($request->reservation_time); 
+
 
     //  Request validation
     //  $request->validate([
@@ -45,13 +45,11 @@ class ParkingController extends Controller
 
     $user = auth()->user(); 
     $parkingSpots = Parking::find($id);
-
     // Write data from the form in the DB. 
     $parkingSpots->blocked_until = $request->reservation_time; 
     $parkingSpots->user_id = $user->id; 
     $user->reservations();
     $parkingSpots->save();
-
 
     // Redirect to Google Maps 
     $latitude = $parkingSpots->latitude;

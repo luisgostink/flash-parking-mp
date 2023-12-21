@@ -29,9 +29,10 @@
                         @enderror
                     </div>    
 
-                    <div>
-                        <button class="reserve" type="submit">Confirm now!</button>
-                    </div>
+                    <button class="reserve" type="submit">
+                        <img src="{{ asset('icons/car.svg') }}" class="car" alt="car">
+                        <span>Confirm now!</span>
+                    </button>
                 </form>
             </div>
         </section>

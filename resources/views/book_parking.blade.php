@@ -2,6 +2,7 @@
 @extends('layouts/layout_centered')
 
         @section('content')
+        
         <section class="flex-container">
             <h1 class="title">Welcome {{$user->name}}</h1>
 
@@ -14,10 +15,10 @@
 
                 <p class="description"> EV Charging:
                     @if($parking->ev_charging)
-                    <img src="{{ asset('icons/ticket.svg') }}" alt="yes">
+                    <img src="{{ asset('icons/ticket.svg') }}" alt="available">
                     <span class="ev">Available</span>
                     @else
-                    <img src="{{ asset('icons/ticket.svg') }}" alt="yes">
+                    <img src="{{ asset('icons/ticket.svg') }}" alt="not available">
                     <span class="ev">Not Available</span>
                     @endif
                 </p>
@@ -28,6 +29,7 @@
                     </a>
                 </div>
             </div>
+
             @endforeach
             </section>
         @endsection
@@ -36,7 +38,6 @@
     
 
         <script>
-        
         // JavaScript code to fetch and display User coordinates
                 let userLat;
                 let userLong;
@@ -44,7 +45,32 @@
                 function displayCoordinates(position) {
                     userLat = position.coords.latitude;
                     userLong = position.coords.longitude;
+
+                    // grab all the parkingspots from html (document.querySelectorAll())
+                    let parkingSpots = document.querySelectorAll('.parking-container');
+
+                    // Create an array to store the coordinates
+                    let parkingCoordinates = [];
+
+                    // Function to update distances for each parking spot
+                    parkingSpots.forEach(parkingSpot => {
+                        // Extract latitude and longitude from data attributes
+                        const parkingLat = parseFloat(parkingSpot.dataset.latitude);
+                        const parkingLong = parseFloat(parkingSpot.dataset.longitude);
+
+                        // Check if latitude and longitude are valid numbers before adding to the array
+                        if (!isNaN(parkingLat) && !isNaN(parkingLong)) {
+                            // Calculate distance
+                            let distance = calculateDistance(userLat, userLong, parkingLat, parkingLong);
+
+                            // Update the distance in the HTML
+                            let distanceElement = parkingSpot.querySelector('p:nth-child(3)');
+                            distanceElement.textContent = `Distance: ${distance} m.`;
+                        }
+                    });
                 }
+
+
 
                 function displayError(error) {
                     // You can handle errors here if needed
@@ -57,49 +83,19 @@
                     // You can handle the case where geolocation is not supported
                     console.error("Geolocation is not available in this browser.");
                 }
-        
-        
-        // grab all the parkingspots from html (document.querySelectorAll())
-            let parkingSpots = document.querySelectorAll('.parking-container');
-
-
-        // Create an array to store the coordinates
-            let parkingCoordinates = [];
-
-
-        // Function to update distances for each parking spot
-        function updateDistances() {
-            parkingSpots.forEach(parkingSpot => {
-                // Extract latitude and longitude from data attributes
-                const parkingLat = parseFloat(parkingSpot.dataset.latitude);
-                const parkingLong = parseFloat(parkingSpot.dataset.longitude);
-            
-
-                // Check if latitude and longitude are valid numbers before adding to the array
-                if (!isNaN(parkingLat) && !isNaN(parkingLong)) {
-                    // Calculate distance
-                    let distance = calculateDistance(userLat, userLong, parkingLat, parkingLong);
-
-                    // Update the distance in the HTML
-                    let distanceElement = parkingSpot.querySelector('p:nth-child(2)');
-                    console.log(distance); 
-                    distanceElement.textContent = `Distance: ${distance} meters`;
-                }
-            });
-        }
 
         // Now, parkingCoordinates array contains objects with latitude and longitude for each parking spot
             // console.log(parkingCoordinates);
         
     
         // Calculate Distance between the user location and each parking spot. 
-            function calculateDistance(userlatitude, userlongitude, parkinglat, parkinglong) {
+        function calculateDistance(userLat, userLong, parkingLat, parkingLong) {
             const earthRadius = 6371; // Earth's radius in kilometers
         
             const lat1 = toRadians(userLat);
-            const lon1 = toRadians(userLng);
+            const lon1 = toRadians(userLong);
             const lat2 = toRadians(parkingLat);
-            const lon2 = toRadians(parkingLng);
+            const lon2 = toRadians(parkingLong);
         
             const dLat = lat2 - lat1;
             const dLon = lon2 - lon1;
