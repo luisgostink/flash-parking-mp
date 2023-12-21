@@ -160,9 +160,10 @@
 }
 
  .reserve {
-    display: block;
-    text-align: center;
-    padding: 30px 80px 30px 80px;  
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px; 
     background-color: $bg-dropdown;
     border: 4px solid black;
     border-radius: 6.45px;
@@ -173,7 +174,12 @@
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
+    gap: 10px;
     cursor: pointer;
+    img {
+        height: 100px; 
+    }
+
     margin-top: 20px;
     margin-bottom: 40px;
  }
@@ -295,8 +301,6 @@
     text-decoration: none;
 
 }
-
-
 
 .title {
     margin-bottom: 20px;

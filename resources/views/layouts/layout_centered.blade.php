@@ -82,5 +82,7 @@
             console.log('toggle')
         }
     </script>
+
+    @stack('scripts')
 </body>
 </html>

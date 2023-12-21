@@ -16,7 +16,8 @@
             </div>
 
             <a class="reserve" href="{{ route('login') }}" >
-                Reserve now!
+                <img src="{{ asset('icons/car.svg') }}" class="car" alt="car">
+                <span>Reserve now!</span>
             </a>
 
             <div class="features" id="features">
@@ -69,8 +70,9 @@
             </div>
 
             <a class="reserve" href="{{ route('login') }}" >
-                    Try it out!
-                </a>
+                <img src="{{ asset('icons/car.svg') }}" class="car" alt="car">
+                <span>Try it out!</span>
+            </a>
             
         </section>
             @endsection
