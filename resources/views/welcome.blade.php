@@ -65,7 +65,7 @@
                 </div>
             </div>
             
-            <div class="description" id="description">
+            <div class="description" style="font-size: 5rem" id="description">
                 <p>Still not convinced?</p>
             </div>
 
