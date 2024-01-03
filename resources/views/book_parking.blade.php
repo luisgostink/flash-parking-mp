@@ -1,36 +1,121 @@
+
 @extends('layouts/layout_centered')
 
         @section('content')
+        
         <section class="flex-container">
             <h1 class="title">Welcome {{$user->name}}</h1>
 
-            <div class="location" id="location" >
-                <form id="locationForm">
-                    <div class="flex-container">
-                        <input class="inputloc"type="text" id="location" name="location" placeholder="Current Location" required>   
-                        <button class="available-btn " type="submit">View availability</button>
-                    </div>
-                </form>
-            </div>
-
             @foreach($parkingSpots as $parking)
 
-            <div class="parking-container">
+            <div class="parking-container" data-latitude="{{$parking->latitude}}" data-longitude="{{$parking->longitude}}">
                 <h1 class="parking-title">{{$parking->name}}</h1>
                 <p class="description">Address: {{$parking->address}}</p>
-                <p class="description">Distance: TBD </p> 
+                <p class="description">Distance: </p>
+
                 <p class="description"> EV Charging:
-                    <label for="ev_charging">
-                        <input type="checkbox" {{ $parking->ev_charging ? 'checked' : '' }} disabled>
-                        {{ $parking->ev_charging ? 'Yes' : 'No' }}
-                    </label>
+                    @if($parking->ev_charging)
+                    <img src="{{ asset('icons/ticket.svg') }}" alt="available">
+                    <span class="ev">Available</span>
+                    @else
+                    <img src="{{ asset('icons/ticket.svg') }}" alt="not available">
+                    <span class="ev">Not Available</span>
+                    @endif
                 </p>
+
                 <div>
                     <a class="details-btn flex-container" href="booking_detailed/{{$parking->id}}">
                         View details
                     </a>
                 </div>
             </div>
+
             @endforeach
             </section>
         @endsection
+
+@push('scripts')
+    
+
+        <script>
+        // JavaScript code to fetch and display User coordinates
+                let userLat;
+                let userLong;
+
+                function displayCoordinates(position) {
+                    userLat = position.coords.latitude;
+                    userLong = position.coords.longitude;
+
+                    // grab all the parkingspots from html (document.querySelectorAll())
+                    let parkingSpots = document.querySelectorAll('.parking-container');
+
+                    // Create an array to store the coordinates
+                    let parkingCoordinates = [];
+
+                    // Function to update distances for each parking spot
+                    parkingSpots.forEach(parkingSpot => {
+                        // Extract latitude and longitude from data attributes
+                        const parkingLat = parseFloat(parkingSpot.dataset.latitude);
+                        const parkingLong = parseFloat(parkingSpot.dataset.longitude);
+
+                        // Check if latitude and longitude are valid numbers before adding to the array
+                        if (!isNaN(parkingLat) && !isNaN(parkingLong)) {
+                            // Calculate distance
+                            let distance = calculateDistance(userLat, userLong, parkingLat, parkingLong);
+
+                            // Update the distance in the HTML
+                            let distanceElement = parkingSpot.querySelector('p:nth-child(3)');
+                            distanceElement.textContent = `Distance: ${distance} m.`;
+                        }
+                    });
+                }
+
+
+
+                function displayError(error) {
+                    // You can handle errors here if needed
+                    console.error("Error fetching coordinates:", error);
+                }
+
+                if ("geolocation" in navigator) {
+                    navigator.geolocation.getCurrentPosition(displayCoordinates, displayError);
+                } else {
+                    // You can handle the case where geolocation is not supported
+                    console.error("Geolocation is not available in this browser.");
+                }
+
+        // Now, parkingCoordinates array contains objects with latitude and longitude for each parking spot
+            // console.log(parkingCoordinates);
+        
+    
+        // Calculate Distance between the user location and each parking spot. 
+        function calculateDistance(userLat, userLong, parkingLat, parkingLong) {
+            const earthRadius = 6371; // Earth's radius in kilometers
+        
+            const lat1 = toRadians(userLat);
+            const lon1 = toRadians(userLong);
+            const lat2 = toRadians(parkingLat);
+            const lon2 = toRadians(parkingLong);
+        
+            const dLat = lat2 - lat1;
+            const dLon = lon2 - lon1;
+        
+            const a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        
+            const distanceInKilometers = earthRadius * c; // Distance in kilometers
+            const distanceInMeters = distanceInKilometers * 1000; // Convert to meters
+        
+            return distanceInMeters.toFixed(2); // Round to 2 decimal places
+        }
+        
+        function toRadians(degrees) {
+            return degrees * (Math.PI / 180);
+        }
+        
+        </script>
+        
+        @endpush

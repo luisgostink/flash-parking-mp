@@ -7,16 +7,12 @@
 
             <img src="{{ asset('icons/verified.svg') }}" class="verified" alt="">
 
-
-            <div class="description">
-                <p>Adress: </p>
-                <p>EV Charging:</p>
-            </div>
+            <p class="description"> Adress: {{$parkingSpots->address}} </p>
             
-            <div>
-              {{--  <a class="reserve" href="{{ route('confirm_booking') }}">
-                    Navigate
-                </a>--}}
-            </div>
+            <a class="reserve" href="{{$navLink}}" target="_blank">
+                <img src="{{ asset('icons/car.svg') }}" class="car" alt="car">
+                <span>Navigate</span>
+            </a>
+
         </section>
         @endsection

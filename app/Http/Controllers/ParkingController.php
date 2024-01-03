@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Parking;
-
 use Carbon\Carbon; 
+
+use Illuminate\Validation\ValidationException;
 
 class ParkingController extends Controller
 {
     // show list of all parking spots.
-
-    // where clause to filter only the available parking spots (unblocked)
 
     public function show_parking(){
         $user = auth()->user(); 
@@ -23,8 +22,7 @@ class ParkingController extends Controller
         })->get();
 
         return view('book_parking', ['parkingSpots' => $parkingSpots, 'user' => $user]);
-        
-        // dd($parkingSpots); 
+
     }
 
     // show selected parking spot.
@@ -35,29 +33,45 @@ class ParkingController extends Controller
     }
 
     public function confirm_booking (Request $request, $id){
-    //   dd($request);
 
-    //Parse the reservation_time input from the user. 
-    $request->reservation_time = Carbon::createFromFormat('Y-m-d H:i', Carbon::now()->toDateString(). " " .$request->reservation_time)->toDateTimeString();
-    // dd($request->reservation_time); 
+   $request->merge([
+    'reservation_time' => Carbon::createFromFormat('H:i', $request->reservation_time)->format('Y-m-d H:i:s')
+   ]);
 
-    // Request validation
-    // $request->validate([
-    // 'reservation_time' => 'required|date_format:Y-m-d H:i:s'
-    // ]);
+
+    //  Request validation
+     $request->validate([
+     'reservation_time' => 'required|date|date_format:Y-m-d H:i:s|after_or_equal:now'
+     ]);
 
     $user = auth()->user(); 
     $parkingSpots = Parking::find($id);
+
+     // Check if the user has already reserved a parking spot
+     if ($user->reservations()->count() > 0) {
+        throw ValidationException::withMessages(['user' => 'You can only reserve one parking spot.']);
+    } 
+
     // Write data from the form in the DB. 
     $parkingSpots->blocked_until = $request->reservation_time; 
     $parkingSpots->user_id = $user->id; 
     $user->reservations();
-    // dd($user.$parkingSpots); 
-    $parkingSpots->save(); 
+    $parkingSpots->save();
 
-    return view('confirm_booking', ['parkingSpots' => $parkingSpots, 'user' => $user, 'id' => $id]);
+    // Redirect to Google Maps 
+    $latitude = $parkingSpots->latitude;
+    $longitude = $parkingSpots->longitude;
+
+    $navLink = "https://www.google.com/maps/dir/?api=1&destination=$latitude,$longitude";
+
+
+    return view('confirm_booking', [
+        'parkingSpots' => $parkingSpots,
+        'user' => $user,
+        'id' => $id,
+        'navLink' => $navLink
+    ]);
+    }
 }
 
 
-
-}

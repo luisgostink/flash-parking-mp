@@ -39,6 +39,9 @@ Route::get('/booking_detailed/{id}', [ParkingController::class, 'show'])->name('
 // Confirm Booking 
 Route::post ('/confirm_booking/{id}', [ParkingController::class, 'confirm_booking'])->name('confirm_booking');
 
+// Navigate 
+
+
 // About me
 Route::get('/about_me',  function () {
     return view('about_me');
@@ -48,6 +51,7 @@ Route::get('/about_me',  function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
