@@ -35,7 +35,6 @@
         @endsection
 
 @push('scripts')
-    
 
         <script>
         // JavaScript code to fetch and display User coordinates
