@@ -1,6 +1,5 @@
 @extends('layouts/layout_centered')
-
-        @section('content')
+    @section('content')
         <section class="flex-container">
             <div id="background-img">
                 <img src="{{ asset('icons/parking-bg-def.png') }}" class="" alt="">
@@ -75,7 +74,7 @@
             </a>
             
         </section>
-            @endsection
+    @endsection
 
             
             
