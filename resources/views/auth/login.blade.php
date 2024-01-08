@@ -1,6 +1,6 @@
 @extends('layouts/layout_centered')
-@section('body-class', 'custom-background')
 @section('content')
+@section('body-class', 'custom-background')
 
 <x-guest-layout>
     <!-- Session Status -->
