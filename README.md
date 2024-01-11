@@ -83,17 +83,17 @@ https://www.figma.com/file/UI7dQoyZDWdm7u76XeVCxg/PROJECTS?type=design&node-id=2
 - [x] Footer alignment.
 - [x] All pages basic design.
 - [x] Dropdown menu.
-- [ ] Add the car.svg to all the reserve buttons and make the slide right animation.
-- [ ] Change color of the dropdown menu elements.
-- [ ] Complete edit of the login/create account page. 
+- [x] Add the car.svg to all the reserve buttons and make the slide right animation.
+- [x] Change color of the dropdown menu elements.
+- [x] Complete edit of the login/create account page. 
 
 ## Backend
 - [x] Make Controllers. 
 - [x] Show data from the DB.
-- [ ] Redirect to Book_Parking.blade with the middleware. after clicking on reserve now.
-- [ ] How to define the user location. (together with Beni)
-- [ ] Calculate distance between the user location and all the available parking spots. (together with Beni). 
-- [ ] Make it work the Reserve parking form and redirect to Confirm Booking page. 
+- [x] Redirect to Book_Parking.blade with the middleware. after clicking on reserve now.
+- [x] How to define the user location. (together with Beni)
+- [x] Calculate distance between the user location and all the available parking spots. (together with Beni). 
+- [x] Make it work the Reserve parking form and redirect to Confirm Booking page. 
 
 
 
