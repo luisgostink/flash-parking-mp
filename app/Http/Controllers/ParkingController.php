@@ -34,9 +34,13 @@ class ParkingController extends Controller
 
     public function confirm_booking (Request $request, $id){
 
+    // dd('Reached confirm_booking method'); DEV ONLY Confirm booking route is working. 
+
    $request->merge([
     'reservation_time' => Carbon::createFromFormat('H:i', $request->reservation_time)->format('Y-m-d H:i:s')
    ]);
+
+    // dd($request); DEV ONLY App is handling the request. 
 
 
     //  Request validation
@@ -47,16 +51,19 @@ class ParkingController extends Controller
     $user = auth()->user(); 
     $parkingSpots = Parking::find($id);
 
-     // Check if the user has already reserved a parking spot
-     if ($user->reservations()->count() > 0) {
-        throw ValidationException::withMessages(['user' => 'You can only reserve one parking spot.']);
-    } 
+     // Check if the user has already reserved two parking spots
+        if ($user->reservations()->count() >= 2) {
+            throw ValidationException::withMessages(['user' => 'You can only reserve a maximum of two parking spots.']);
+        }
+
 
     // Write data from the form in the DB. 
     $parkingSpots->blocked_until = $request->reservation_time; 
     $parkingSpots->user_id = $user->id; 
     $user->reservations();
     $parkingSpots->save();
+
+    dd($request->reservation_time);
 
     // Redirect to Google Maps 
     $latitude = $parkingSpots->latitude;

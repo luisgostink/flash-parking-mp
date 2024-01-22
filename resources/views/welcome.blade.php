@@ -14,10 +14,17 @@
                 <p>Say goodbye to parking hassles and long searches.  Find the perfect  spot quickly and easily.</p>
             </div>
 
+            @if (auth()->check()) 
+            <a class="reserve" href="/book_parking" >
+                <img src="{{ asset('icons/car.svg') }}" class="car" alt="car">
+                <span>Reserve now!</span>
+            </a>
+            @else
             <a class="reserve" href="{{ route('login') }}" >
                 <img src="{{ asset('icons/car.svg') }}" class="car" alt="car">
                 <span>Reserve now!</span>
             </a>
+            @endif
 
             <div class="features" id="features">
                 <div class="column">
