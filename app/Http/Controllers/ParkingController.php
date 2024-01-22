@@ -40,8 +40,8 @@ class ParkingController extends Controller
     'reservation_time' => Carbon::createFromFormat('H:i', $request->reservation_time)->format('Y-m-d H:i:s')
    ]);
 
-    // dd($request); DEV ONLY App is handling the request. 
-
+     dd($request); 
+    // DEV ONLY App is handling the request. 
 
     //  Request validation
      $request->validate([
@@ -63,7 +63,7 @@ class ParkingController extends Controller
     $user->reservations();
     $parkingSpots->save();
 
-    dd($request->reservation_time);
+ //   dd($request->reservation_time);
 
     // Redirect to Google Maps 
     $latitude = $parkingSpots->latitude;
