@@ -40,7 +40,7 @@ class ParkingController extends Controller
     'reservation_time' => Carbon::createFromFormat('H:i', $request->reservation_time)->format('Y-m-d H:i:s')
    ]);
 
-     dd($request); 
+     
     // DEV ONLY App is handling the request. 
 
     //  Request validation
@@ -48,19 +48,19 @@ class ParkingController extends Controller
      'reservation_time' => 'required|date|date_format:Y-m-d H:i:s|after_or_equal:now'
      ]);
 
+
     $user = auth()->user(); 
     $parkingSpots = Parking::find($id);
 
      // Check if the user has already reserved two parking spots
         if ($user->reservations()->count() >= 2) {
-            throw ValidationException::withMessages(['user' => 'You can only reserve a maximum of two parking spots.']);
+            throw ValidationException::withMessages(['overbooked' => 'You can only reserve a maximum of two parking spots at the same time.']);
         }
 
 
     // Write data from the form in the DB. 
     $parkingSpots->blocked_until = $request->reservation_time; 
     $parkingSpots->user_id = $user->id; 
-    $user->reservations();
     $parkingSpots->save();
 
  //   dd($request->reservation_time);

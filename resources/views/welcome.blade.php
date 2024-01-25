@@ -75,10 +75,17 @@
                 <p>Still not convinced?</p>
             </div>
 
+            @if (auth()->check()) 
+            <a class="reserve" href="/book_parking" >
+                <img src="{{ asset('icons/car.svg') }}" class="car" alt="car">
+                <span>Try it out!</span>
+            </a>
+            @else
             <a class="reserve" href="{{ route('login') }}" >
                 <img src="{{ asset('icons/car.svg') }}" class="car" alt="car">
                 <span>Try it out!</span>
             </a>
+            @endif
             
         </section>
     @endsection
