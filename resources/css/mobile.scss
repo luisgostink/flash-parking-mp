@@ -1,0 +1,38 @@
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  
+    .flex-container {
+      flex-direction: column; /* Stack elements vertically on small screens */
+      text-align: center;
+    }
+
+    .header {
+        max-width: 5rem;
+    }
+
+    .title-logo {
+        height: 3rem;
+    }
+
+    .slogan {
+        font-size: 12px; 
+    }
+  
+ 
+  }
+  
+  /* Tablet styles */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Adjustments for tablet-sized screens */
+    body {
+      font-size: 16px; /* Adjust font size for medium-sized screens */
+    }
+  
+    /* Add more specific styles for tablet-sized screens as needed */
+  }
+  
+  /* Larger screens (desktop) */
+  @media only screen and (min-width: 1025px) {
+    /* Your default styles for larger screens */
+  }
+  

@@ -2,7 +2,7 @@
     @section('content')
         <section class="flex-container">
             <div id="background-img">
-                <img src="{{ asset('icons/parking-bg-def.png') }}" class="" alt="">
+                <img src="{{ asset('icons/parking-bg-def.png') }}" class="background-img" alt="">
             </div>
             <div>
                 <img src="{{ asset('icons/title-logo.svg') }}" class="title-logo" alt="title-logo">
