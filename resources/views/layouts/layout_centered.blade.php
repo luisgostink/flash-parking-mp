@@ -33,14 +33,18 @@
                     <div class="flex-container menu-items">
                         <div><a href="{{'/'}}" class="active" style= "text-decoration: none" >Home</a></div>
                         <div><a href="{{'about_me'}}" style= "text-decoration: none" >About me</a></div>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <x-dropdown-link :href="route('logout')" style="text-decoration: none;"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
+                            @guest
+                                <a href="{{ route('login') }}" style="text-decoration: none;">{{ __('Log In') }}</a>
+                            @else
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <x-dropdown-link :href="route('logout')" style="text-decoration: none;"
+                                            onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                </form>
+                            @endguest
                         <div><a href="{{'book_parking'}}" style= "text-decoration: none">Reserve</a></div>
                     </div>
 
@@ -51,7 +55,7 @@
                             <img src="{{ asset('icons/fast_parking_white.svg') }}" class="footer-logo" alt="footer-logo">
                         </div>
                     </footer>
-                    
+        
                 </div>
 
                 <a href="/">

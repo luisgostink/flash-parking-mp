@@ -30,6 +30,7 @@
                         @error('reservation_time')
                             <div>{{$message}}</div>
                         @enderror
+                        
                     </div>    
 
                     <button class="reserve" type="submit">

@@ -76,7 +76,7 @@
 }
 
 .menu-items {
-    gap: 55px;
+    gap: 50px;
     font-family: $main-font;
     font-weight: 700;
     text-transform: uppercase;
@@ -213,8 +213,8 @@
  }
 
  hr { 
-    border-top: 3px solid black;
-    margin-bottom: 20px;
+    border-top: 3px solid black !important;
+    margin-bottom: 20px !important;
     width: 100vw;
 } 
 
@@ -354,6 +354,20 @@
     width: 80px;
 }
 
+.register-2 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 12px !important ;
+    text-transform: none !important;
+    text-align: center;
+    margin-left: 20px; 
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 6.45px;
+    width: 80px;
+}
+
 .forgot {
     font-family: 'Inter', sans-serif !important;
     font-weight: bold !important;
@@ -393,9 +407,9 @@
 
 .custom-2 {
     font-family: $main-font !important; 
-    color: $bg-dropdown !important;
+    color: black !important;
     font-size: 12px !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     border: 2px solid $bg-dropdown !important; 
 }
 
@@ -415,11 +429,6 @@
     }
 }
 
-.location-logo {
-    height: 25px;
-    width: 25px;
-    position: absolute;
-    top: 50%;
-    right: 5px; /* Adjust the right position as needed */
-    transform: translateY(-50%);
+.profile-img {
+    align-items: center;
 }
