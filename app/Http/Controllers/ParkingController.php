@@ -48,14 +48,14 @@ class ParkingController extends Controller
      'reservation_time' => 'required|date|date_format:Y-m-d H:i:s|after_or_equal:now'
      ]);
 
-
     $user = auth()->user(); 
     $parkingSpots = Parking::find($id);
 
-     // Check if the user has already reserved two parking spots
-        if ($user->reservations()->count() >= 2) {
-            throw ValidationException::withMessages(['overbooked' => 'You can only reserve a maximum of two parking spots at the same time.']);
-        }
+    // 
+    //  // Check if the user has already reserved two parking spots
+    //     if ($user->reservations()->count() >= 2) {
+    //         throw ValidationException::withMessages(['overbooked' => 'You can only reserve a maximum of two parking spots at the same time.']);
+    //     }
 
 
     // Write data from the form in the DB. 
@@ -65,7 +65,7 @@ class ParkingController extends Controller
 
  //   dd($request->reservation_time);
 
-    // Redirect to Google Maps 
+    // Redirect to Google Maps to Navigate
     $latitude = $parkingSpots->latitude;
     $longitude = $parkingSpots->longitude;
 
