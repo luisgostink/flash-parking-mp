@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 
-    @vite(['resources/css/main.scss'])
+    @vite(['resources/css/main.scss', 'resources/css/app.scss', 'resources/js/app.js'])
 
 </head>
 
