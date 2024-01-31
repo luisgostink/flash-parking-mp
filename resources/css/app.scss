@@ -103,8 +103,11 @@
 
 .title {
     font-family: 'Inter', sans-serif;
-    font-size: 50px;
+    font-size: 30px;
     text-shadow: 3px 3px $bg-dropdown ; 
+    display: inline-flex;
+    gap: 50px;
+    margin-top: 50px;
 }
 
 .parking-title{
@@ -247,14 +250,10 @@
 }
 
 .container-2 {
-    border: 5px solid black;
-    box-shadow: 5px 5px $bg-dropdown;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 100px;
-    border-radius: 6.45px;
     text-align: center;
-    background-color: $bg-color;
     width:800px;
 }
 
@@ -433,7 +432,9 @@
 }
 
 .profile-img {
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 120px;
 }
 
 

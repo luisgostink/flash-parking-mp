@@ -4,9 +4,9 @@
             <div>
                 <img src="{{ asset('icons/logo-aboutme.svg') }}" class="title-logo" alt="title-logo">
             </div>
-            <div class="profile-img">
-                <h1 class="title">Luis Gostin</h1>
-                <img src="{{ asset('icons/profile-pic.png') }}" alt="profile-img">
+            <div class="title">
+                <img class="profile-img" src="{{ asset('icons/profile-pic.png') }}"alt="profile-img">
+                <h1 >Luis Gostin</h1>
             </div>
             
             <div class="description container-2">
