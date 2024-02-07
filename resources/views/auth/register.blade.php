@@ -48,9 +48,9 @@
                 {{ __('Already registered?') }}
             </a>
 
-            <a class="register-2" href="{{ route('register') }}">
-                Register
-              </a>
+            <x-primary-button class="register-2">
+                {{ __('Register') }}
+            </x-primary-button>
             
         </div>
     </form>
