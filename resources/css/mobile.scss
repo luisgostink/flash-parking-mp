@@ -4,10 +4,11 @@
     .flex-container {
       flex-direction: column; /* Stack elements vertically on small screens */
       text-align: center;
+      background-color: aqua;
     }
 
     .header {
-        max-width: 5rem;
+        // max-width: ;
     }
 
     .title-logo {

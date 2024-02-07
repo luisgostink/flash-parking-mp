@@ -36,14 +36,17 @@
 //     text-align: center;
 //  }
 
+.header {
+    padding: 40px 100px 40px 100px;
+}
 
 .nav-wrapper{
     display: flex;
+    justify-content:space-between;
     align-items: center;
 }
 
-.logo{ 
-    margin: 25px 0px 25px 200px;
+.logo { 
     height: 80px; 
 }
 
@@ -52,7 +55,6 @@
 }
 
 .menu-btn {
-    margin-right: 200px;
     height: 40px;  
     width: 40px;
     background: none;
@@ -69,7 +71,7 @@
     width: 100vw; 
     background-color: $bg-dropdown;
     position: fixed;
-    top: -100vh; 
+    top: -100%; 
     left: 0;
     transition: transform 0.5s ease-in-out;
     z-index: 10;
@@ -358,16 +360,16 @@
 
 .register-2 {
     font-family: 'Inter', sans-serif !important;
-    font-weight: bold !important;
-    font-size: 12px !important ;
-    text-transform: none !important;
-    text-align: center;
-    margin-left: 20px; 
-    background-color: black;
-    color: white;
-    padding-right: 4px !important;
-    border-radius: 6.45px;
-    width: 80px !important;
+    // font-weight: bold !important;
+    // font-size: 12px !important ;
+    // text-transform: none !important;
+    // text-align: center;
+    // margin-left: 20px; 
+    // background-color: black;
+    // color: white;
+    // padding-right: 4px !important;
+    // border-radius: 6.45px;
+    // width: 80px !important;
 }
 
 .forgot {
