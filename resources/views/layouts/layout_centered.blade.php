@@ -38,7 +38,7 @@
                     </header>
                     <div class="flex-container menu-items">
                         <div><a href="{{'/'}}" class="active" style= "text-decoration: none" >Home</a></div>
-                        <div><a href="{{'about_me'}}" style= "text-decoration: none" >About me</a></div>
+                        <div><a href="{{'/about_me'}}" style= "text-decoration: none" >About me</a></div>
                             @guest
                                 <a href="{{ route('login') }}" style="text-decoration: none;">{{ __('Log In') }}</a>
                             @else
@@ -51,7 +51,7 @@
                                     </x-dropdown-link>
                                 </form>
                             @endguest
-                        <div><a href="{{'book_parking'}}" style= "text-decoration: none">Reserve</a></div>
+                        <div><a href="{{'/book_parking'}}" style= "text-decoration: none">Reserve</a></div>
                         <footer class="footer">
                             <hr>
                             <div class="footer-container">

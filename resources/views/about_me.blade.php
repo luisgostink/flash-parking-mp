@@ -5,7 +5,7 @@
             <div>
                 <img src="{{ asset('icons/logo-aboutme.svg') }}" class="title-logo" alt="title-logo">
             </div>
-            <div class="title">
+            <div class="about-me">
                 <img class="profile-img" src="{{ asset('icons/profile-pic.png') }}"alt="profile-img">
                 <h1 >Luis Gostin</h1>
             </div>
