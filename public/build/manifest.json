@@ -5,12 +5,12 @@
     "src": "resources/css/app.css"
   },
   "resources/css/app.scss": {
-    "file": "assets/app-a87a4e58.css",
+    "file": "assets/app-19abb562.css",
     "isEntry": true,
     "src": "resources/css/app.scss"
   },
   "resources/css/main.scss": {
-    "file": "assets/main-5f180f16.css",
+    "file": "assets/main-a91182b6.css",
     "isEntry": true,
     "src": "resources/css/main.scss"
   },
