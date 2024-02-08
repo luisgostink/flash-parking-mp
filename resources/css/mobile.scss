@@ -1,23 +1,48 @@
 /* Mobile styles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 667px) {
   
     .flex-container {
       flex-direction: column; /* Stack elements vertically on small screens */
       text-align: center;
-      background-color: aqua;
+      border: 5px solid aqua;
+      padding: 10px;
     }
 
     .header {
-        // max-width: ;
+        margin: auto; 
     }
 
+    .spacer {
+      flex: 1; 
+    }
+
+
     .title-logo {
-        height: 3rem;
+        width: 95vw;
+    }
+
+    .menu-items {
+
     }
 
     .slogan {
-        font-size: 12px; 
+       width: 95vw;
+       font-size: small;
     }
+
+    .description {
+
+    }
+
+    .reserve {
+         
+    }
+
+    .features {
+      flex-direction: column;
+    }
+
+
   
  
   }
