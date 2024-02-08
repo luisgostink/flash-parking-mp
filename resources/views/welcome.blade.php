@@ -1,5 +1,6 @@
 @extends('layouts/layout_centered')
     @section('content')
+    @section('pageTitle', 'Welcome')
         <section class="flex-container">
             <div id="background-img">
                 <img src="{{ asset('icons/parking-bg-def.png') }}" class="background-img" alt="">

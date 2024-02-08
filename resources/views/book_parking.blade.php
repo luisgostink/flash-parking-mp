@@ -1,7 +1,7 @@
 
 @extends('layouts/layout_centered')
-
-        @section('content')
+@section('pageTitle', 'Reserve')
+@section('content')
         
         <section class="flex-container">
             <h1 class="title">Welcome {{$user->name}}</h1>

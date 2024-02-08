@@ -1,4 +1,5 @@
 @extends('layouts/layout_centered')
+@section('pageTitle', 'Login')
 @section('content')
 @section('body-class', 'custom-background')
 

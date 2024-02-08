@@ -1,4 +1,5 @@
 @extends('layouts.layout_centered')
+@section('pageTitle', 'About Me')
 @section('content')
         <section class="flex-container">
             <div>

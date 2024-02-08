@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>@yield('pageTitle') - Flashparking</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 
-    @vite(['resources/css/main.scss', 'resources/css/app.scss', 'resources/js/app.js'])
+    {{--favicon links--}}
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    @vite(['resources/css/main.scss', 'resources/js/app.js'])
 
 </head>
 
@@ -46,16 +52,14 @@
                                 </form>
                             @endguest
                         <div><a href="{{'book_parking'}}" style= "text-decoration: none">Reserve</a></div>
+                        <footer class="footer">
+                            <hr>
+                            <div class="footer-container">
+                                <p>&copy;{{date("Y")}}</p>
+                                <img src="{{ asset('icons/fast_parking_white.svg') }}" class="footer-logo" alt="footer-logo">
+                            </div>
+                        </footer>
                     </div>
-
-                    <footer class="footer">
-                        <hr>
-                        <div class="footer-container">
-                            <img src="{{ asset('icons/copyright.svg') }}" class="copyright" alt="copyright">
-                            <img src="{{ asset('icons/fast_parking_white.svg') }}" class="footer-logo" alt="footer-logo">
-                        </div>
-                    </footer>
-        
                 </div>
 
                 <a href="/">
@@ -73,7 +77,7 @@
         <footer class="footer">
             <hr>
             <div class="footer-container">
-                <img src="{{ asset('icons/copyright.svg') }}" class="copyright" alt="copyright">
+                <p>&copy;{{date("Y")}}</p>
                 <img src="{{ asset('icons/fast_parking.svg') }}" class="footer-logo" alt="footer-logo">
             </div>
         </footer>

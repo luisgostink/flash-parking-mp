@@ -1,5 +1,5 @@
 @extends('layouts/layout_centered')
-
+@section('pageTitle', 'Confirm Booking')
         @section('content')
         <section class="flex-container">
             <h1 class="parking-title">Congratulations {{$user->name}}</h1>

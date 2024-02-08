@@ -81,8 +81,9 @@
 }
 
 .menu-items {
-    gap: 20px;
+    gap: 2vh;
     font-family: $main-font;
+    font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
     text-shadow: 3px 3px white;
@@ -92,6 +93,9 @@
        &:visited {
         color: black;
        } 
+    }
+    p {
+        text-shadow: none;
     }
 }
 
@@ -105,7 +109,7 @@
 
 .title {
     font-family: 'Inter', sans-serif;
-    font-size: 30px;
+    font-size: 50px;
     text-shadow: 3px 3px $bg-dropdown ; 
     display: inline-flex;
     gap: 50px;
@@ -210,7 +214,12 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
- }
+    p{
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        font-weight:600;     
+    }
+}
 
  hr { 
     border-top: 3px solid black !important;

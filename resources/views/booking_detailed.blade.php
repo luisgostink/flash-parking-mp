@@ -1,6 +1,6 @@
 @extends('layouts/layout_centered')
-
-        @section('content')
+@section('pageTitle', 'details')
+    @section('content')
         <section class="flex-container">
 
             <h1 class="title">{{$parkingSpots->name}}</h1>
