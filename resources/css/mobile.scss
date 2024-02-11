@@ -4,25 +4,20 @@
     .flex-container {
       flex-direction: column; /* Stack elements vertically on small screens */
       text-align: center;
-      border: 5px solid aqua;
+       border: 5px solid aqua;
       padding: 10px;
     }
 
     .header {
-        margin: auto; 
+     
     }
-
-    .spacer {
-      flex: 3; 
-    }
-
 
     .title-logo {
         width: 95vw;
     }
 
-    .menu-items {
-      
+    .spacer {
+      flex: 1; 
     }
 
     .slogan {
