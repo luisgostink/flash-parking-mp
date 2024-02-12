@@ -55,7 +55,6 @@
                     </div>
                     <div class="spacer"></div>
                     <footer class="footer">
-                        <hr>
                         <div class="footer-container">
                             <p>&copy;{{date("Y")}}</p>
                             <img src="{{ asset('icons/fast_parking_white.svg') }}" class="footer-logo" alt="footer-logo">
