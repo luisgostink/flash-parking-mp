@@ -9,7 +9,11 @@
     }
 
     .header {
-     
+      padding: 40px 30px 40px 30px;
+    }
+
+    .about-me {
+      display: block;
     }
 
     .title-logo {
@@ -21,26 +25,26 @@
     }
 
     .slogan {
-       // width: 95vw;
-       font-size: 12px;
+       width: 95vw;
+       font-size: 20px;
     }
 
-    .description {
-
-    }
-
-    .reserve {
-         
-    }
-
+  
     .features {
       flex-direction: column;
     }
 
+    .parking-container {
+      display: flex;
+      flex-direction: row;
+    }
 
-  
+    parking-title {
+      font-size: 12px;
+    }
  
   }
+  
   
   /* Tablet styles */
   @media only screen and (min-width: 601px) and (max-width: 1024px) {

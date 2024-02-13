@@ -70,13 +70,14 @@
     width: 100vw; 
     background-color: $bg-dropdown;
     position: fixed;
-    top: -100%; 
+    top: -100%;
     left: 0;
     transition: transform 0.5s ease-in-out;
     z-index: 10;
     &.active {
         transform: translateY(100%);
     }
+    overflow: hidden;
 }
 
 .menu-items {
@@ -144,7 +145,7 @@
  .description {
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 30px;
-    margin: 50px 0px 50px 0px ;
+    // margin: 20px 0px 20px 0px ;
     
 }
 
@@ -163,7 +164,7 @@
     background-color: rgb(255,198,27, 70%);
     padding: 20px;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
  .column {
@@ -208,29 +209,32 @@
  .footer {
     bottom: 0;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     row-gap: 30px;
     align-items: center;
- }
-
- .footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    p{
-        font-family: 'Inter', sans-serif;
-        font-size: 15px;
-        font-weight:600;     
-    }
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
- hr { 
-    border-top: 3px solid black !important;
-    margin-bottom: 20px !important;
-    width: 100vw;
-} 
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Updated to column */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 
+    .first-row, .second-row {
+        display: flex;
+        align-items: center;
+        gap: 30px !important;
+    }
+
+    p {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
 
 
  .footer-logo {
@@ -238,22 +242,20 @@
  }  
  
 
- .copyright {
-    height: 30px;
- }
 
 .parking-container {
     border: 5px solid black;
     box-shadow: 5px 5px $bg-dropdown;
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     padding-left: 50px;
+    padding-right: 50px;
     padding-bottom: 50px;
-    margin-bottom: 100px;
     border-radius: 6.45px;
     text-align: left;
     background-color: $bg-color;
-    width: 700px;
 }
 
 .container-2 {
