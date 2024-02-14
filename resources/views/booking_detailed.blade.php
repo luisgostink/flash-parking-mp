@@ -7,7 +7,7 @@
 
             <iframe src={{$parkingSpots->map_frame}}" width="600" height="450" style="border: 3px solid #FFC61B; border-radius: 6.45px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
 
-            <div class="parking-description">
+            <div class="confirm-description">
                 <p >Address: {{$parkingSpots->address}}</p>
                 {{-- <p >Distance: </p> --}}
                 <p > EV Charging:

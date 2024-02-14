@@ -2,14 +2,17 @@
 @media only screen and (max-width: 667px) {
   
     .flex-container {
-      flex-direction: column; /* Stack elements vertically on small screens */
+/* Stack elements vertically on small screens */
       text-align: center;
-       border: 5px solid aqua;
-      padding: 10px;
+      // border: 5px solid aqua; DEV PURPOSES ONLY
     }
 
     .header {
       padding: 40px 30px 40px 30px;
+    }
+
+    .title {
+      font-size: 40px;
     }
 
     .about-me {
@@ -17,7 +20,7 @@
     }
 
     .title-logo {
-        width: 95vw;
+        height: 75px;
     }
 
     .spacer {
@@ -37,25 +40,43 @@
     .parking-container {
       display: flex;
       flex-direction: column;
+      text-align: center;
       max-width: 300px;
       width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
-    .parking-description {
-      margin: 0;
+    .details-btn {
+      max-width: 300px;
+    }
+
+    .title-logo {
+      height: 65px;
+    }
+
+    .about-me-logo {
+      height: 80px;
     }
 
     .menu-items {
       gap: 20px;
       text-shadow: 2px 2px white;
       font-size: 30px;
-  }
+      margin-bottom: 50px;
+    }
 
 
     iframe {
       width: 370px;
       height: 300px;
     }
+
+    .container-2 {
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-bottom: 50px;
+  }
  
   }
   
@@ -74,4 +95,3 @@
   @media only screen and (min-width: 1025px) {
     /* Your default styles for larger screens */
   }
-  

@@ -13,7 +13,7 @@
                 <div class="parking-description">
                     <p>Address: {{$parking->address}}</p>
                     <p>Distance: </p>
-                    <p> EV Charging:
+                    <p class="charging-info"> EV Charging:
                         @if($parking->ev_charging)
                         <img src="{{ asset('icons/ticket.svg') }}" alt="available">
                         <span>Available</span>
