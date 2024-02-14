@@ -34,7 +34,7 @@ function displayCoordinates(position) {
             let distance = calculateDistance(userLat, userLong, parkingLat, parkingLong);
 
             // Update the distance in the HTML
-            let distanceElement = parkingSpot.querySelector('p:nth-child(3)');
+            let distanceElement = parkingSpot.querySelector('p:nth-child(2)');
             distanceElement.textContent = `Distance: ${distance} m.`;
         }
     });

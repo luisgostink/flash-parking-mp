@@ -10,18 +10,19 @@
 
             <div class="parking-container" data-latitude="{{$parking->latitude}}" data-longitude="{{$parking->longitude}}">
                 <h1 class="parking-title">{{$parking->name}}</h1>
-                <p class="description">Address: {{$parking->address}}</p>
-                <p class="description">Distance: </p>
-
-                <p class="description"> EV Charging:
-                    @if($parking->ev_charging)
-                    <img src="{{ asset('icons/ticket.svg') }}" alt="available">
-                    <span class="ev">Available</span>
-                    @else
-                    <img src="{{ asset('icons/ticket.svg') }}" alt="not available">
-                    <span class="ev">Not Available</span>
-                    @endif
-                </p>
+                <div class="parking-description">
+                    <p>Address: {{$parking->address}}</p>
+                    <p>Distance: </p>
+                    <p> EV Charging:
+                        @if($parking->ev_charging)
+                        <img src="{{ asset('icons/ticket.svg') }}" alt="available">
+                        <span>Available</span>
+                        @else
+                        <img src="{{ asset('icons/ticket.svg') }}" alt="not available">
+                        <span>Not Available</span>
+                        @endif
+                    </p>
+                </div>
 
                 <div>
                     <a class="details-btn flex-container" href="booking_detailed/{{$parking->id}}">

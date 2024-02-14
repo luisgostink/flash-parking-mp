@@ -144,14 +144,21 @@
  .description {
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 30px;
-    // margin: 20px 0px 20px 0px ;
-    
 }
 
+.parking-description {
+        font-family: 'Pathway Gothic One', sans-serif;
+        font-size: 30px;
+        // margin: 20px 0px 20px 0px ;
+
+
+}
+
+
 .ev {
-        font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        font-weight: 600;
+        font-family:'Pathway Gothic One', sans-serif;
+        font-size: 30px;
+        gap: 30px;
     }
 
 
@@ -220,21 +227,18 @@
     flex-direction: column; /* Updated to column */
     justify-content: center;
     align-items: center;
-    gap: 20px;
 
     .first-row, .second-row {
         display: flex;
         align-items: center;
         gap: 30px !important;
     }
-
     p {
         font-family: 'Inter', sans-serif;
         font-size: 20px;
         font-weight: 600;
     }
 }
-
 
  .footer-logo {
     height: 40px; 
@@ -255,6 +259,8 @@
     border-radius: 6.45px;
     text-align: left;
     background-color: $bg-color;
+    max-width: 960px;
+    width: 100%;
 }
 
 .container-2 {

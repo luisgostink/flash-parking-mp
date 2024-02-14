@@ -36,11 +36,25 @@
 
     .parking-container {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      max-width: 300px;
+      width: 100%;
     }
 
-    parking-title {
-      font-size: 12px;
+    .parking-description {
+      margin: 0;
+    }
+
+    .menu-items {
+      gap: 20px;
+      text-shadow: 2px 2px white;
+      font-size: 30px;
+  }
+
+
+    iframe {
+      width: 370px;
+      height: 300px;
     }
  
   }
