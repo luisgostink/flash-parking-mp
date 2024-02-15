@@ -27,7 +27,8 @@ My name is [Luis Gostin](https://flashparking.ch/about_me). Musician and program
 - Edit reservation. 
 - Built in payment system.
 - Receive an email when the user has made or cancelled a reservation.
-- Page with the history of bookings the user has made. 
+- Page with the history of bookings the user has made.
+- Show first the nearest parking spot.
 
 
 
