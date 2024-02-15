@@ -1,99 +1,38 @@
-# FlashParking
-As part of the **web development** semester course I attended at **Opportunity Zurich**, this project will be my **masterpiece** with a deadline of **29.12.2023.**
-
+# Project Name: FlashParking
+FlashParking is a web-app where people can reserve parking spots based on the user's location, retrieving parking space availability information. This, with the purpose of finding the nearest available parking space. The original idea was thought for people with reduced mobility.  
+This project is my final project for the **web development** Bootcamp I attended at [Opportunity Zürich]((https://www.stadt-zuerich.ch/sd/de/index/unterstuetzung/ai/arbeitsintegrationsozialhilfe/opportunity.html)). 
 
 # Brief Description
-I want to develop a web-app that will show the users a list with the parking spaces available based on the user's location, retrieving parking space availability information. With that in mind the user can reserve the nearest parking spot available.
+I want to develop a web-app that will show the users a list with the parking spaces available based on the user's location, retrieving parking space availability information. With that in mind the user can reserve the nearest parking spot available. The main objective of the priject was to create a minimalistic user friendly app where you can find the nearest available parking spot based on the user location.
 
+# My motivations for this project. 
+Despite the fact that I am a professionally trained musician, I've been always interested in technology. As I teenager I developed interest in computers to the point that I used to work as a freelance computer technician using remote support apps and also upgrading computer components and doing system maintenance for private clients. Therefore, when I was offered this apprenticeship, I thought it would be a good opportunity to certify my knowledge in the area of programming and to be able to access the job market in the field of IT. There, I learned some programming technologies such as HTML, [SASS](https://sass-lang.com/), JavaScript, and frameworks like [Laravel](https://laravel.com/) or Vue.js. The technologies used for the project were: [Laravel](https://laravel.com/) (framework), HTML, [SASS](https://sass-lang.com/) and Javascript.   
 
-# Project Objective
-The main objective of the priject is to create a minimalistic user friendly app where you can find the nearest available parking spot based on the user location: 
-
-## Mandatory
-### Frontend Features: 
-- Welcome page with the brief description of the app and a button to go to the login page. The user must first login or create an account before reserving a parking spot. 
-- Login page (form) with a link that redirects to the create account page.
-- Create account page (form). 
-- Parking list *or map(?)* with all the available parking spots, with a hover or redirect function to see where its located and how far away is from the user's location. 
-
-### Backend Features: 
-- User login form. 
-- Create user form. 
-- Database: 
-    - Users table. 
-    - Parking spots table. 
-
-## Nice to have (both Frontend and Backend)
-- Light/dark mode toggle. 
-- Language translation to Spanish and German. 
-- Be able to reserve a parking spot for a limited amount of time and if the user wants, can rebook it. 
-- Built in payment system. 
-
+## Live-Demo
+The app in MVP status. If you want to try it out, please go to [FlashParking](https://flashparking.ch).
 
 # Techstack
-The website will be build using the following technologies: 
-- **Frontend:** HTML, SCSS, Javascript.
+The web-app was built using the following technologies: 
+- **Frontend:** HTML, SCSS, Javascript, Laravel.
 - **Backend:** MySQL, PHPMyAdmin, Laravel.  
 - **Deployment:** Forge. 
 - **Provider:** Digital Ocean.
 
+## About the Developer: 
+My name is [Luis Gostin](https://flashparking.ch/about_me). Musician and programmer under development. 
 
-
-# Rough Roadmap
-## Mandatory
-### Phase 1 - Planning (01.11.2023 - 02.11.2023)
-- Figma and Co.
-- Elaborate concept.
-- Create a LoHi wireframe.
-- Determine design.
-
-### Phase 2 - Basic functions (06.11.2023 - 10.11.2023)
-- Creating the HiFi wireframe.
-- Create Database Schema. 
-- Building the basic structure of the website.
-- Home page (homepage).
-- About me/imoressum page. 
-- Login page.
-- Register page.
-- Create database Models, Controllers, and Seeders.
-- Show a list of the parking spots that the user has reserved.
-
-## Optional
-### Phase 3 - Aditional functions (13.11.2023 - 24.11.2023)
-- Let one user reserve multiple parking spots but reserved only to that user, so another user cannot reserve a parkingspot that was already reserved.
+## Further improvements 
 - Light/dark mode toggle. 
 - Language translation to Spanish and German. 
-- Be able to reserve a parking spot for a limited amount of time and if the user wants, can rebook it. 
+- Edit reservation. 
+- Built in payment system.
+- Receive an email when the user has made or cancelled a reservation.
+- Page with the history of bookings the user has made. 
 
 
 
-### Phase 4 - Improvements, Testing and Bug-fixing. 
-. . . (work in progress) . . .
 
 
-# Links
-## Github 
-https://github.com/luisgostink/flash-parking-mp
-## Figma
-https://www.figma.com/file/UI7dQoyZDWdm7u76XeVCxg/PROJECTS?type=design&node-id=295-3&mode=design&t=WOoLGAMQ22BcOIMB-0
-
-
-# TO DO List:
-## Frontend 
-- [x] Footer alignment.
-- [x] All pages basic design.
-- [x] Dropdown menu.
-- [x] Add the car.svg to all the reserve buttons and make the slide right animation.
-- [x] Change color of the dropdown menu elements.
-- [x] Complete edit of the login/create account page. 
-
-## Backend
-- [x] Make Controllers. 
-- [x] Show data from the DB.
-- [x] Redirect to Book_Parking.blade with the middleware. after clicking on reserve now.
-- [x] How to define the user location. (together with Beni)
-- [x] Calculate distance between the user location and all the available parking spots. (together with Beni). 
-- [x] Make it work the Reserve parking form and redirect to Confirm Booking page. 
 
 
 
