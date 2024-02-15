@@ -16,13 +16,13 @@
                     because it's my first love, 
                     but I have also been interested in technology, 
                     due to my experience working as a freelance computer technician.  
-                    This app is my masterpiece project for my 6 months apprenticeship I did at Opportunity Zurich (...)
+                    This app is my masterpiece project for my 6 months apprenticeship I did at Opportunity Zurich. 
                 </p>
             </div>
 
             <div class="description container-2">
                 <p> FlashParking is a parking reservation service provided by Luis Gostin Krämer.
-                    All content, including text, graphics, logos, and images, is the property of Luis Gostin Krämer.
+                    All content, including text, graphics, logos, and images, are property of Luis Gostin Krämer.
                     This app was developed using Laravel, a free, open-source PHP web framework and also HTML, SCSS and JavaScript.
                 </p>
             </div>
